@@ -96,7 +96,7 @@
 <div class="navbar main hidden-print">
 
     <!-- Brand -->
-    <a href="index.html?lang=en" class="appbrand"><span>AdminKIT <span>v1.3</span></span></a>
+    <a href="index.html?lang=en" class="appbrand"><span>Lovemetrip <span>vBeta</span></span></a>
 
     <!-- Menu Toggle Button -->
     <button type="button" class="btn btn-navbar">
@@ -239,6 +239,7 @@
 <!-- // Sidebar Profile END -->
 
 <!-- Sidebar Mini Stats -->
+<!--
 <div id="notif">
     <ul>
         <li><a href="" class="glyphicons envelope"><i></i> 5</a></li>
@@ -247,6 +248,7 @@
         <li><a href="" class="glyphicons user_add"><i></i> 14</a></li>
     </ul>
 </div>
+-->
 <!-- // Sidebar Mini Stats END -->
 
 <!-- Regular Size Menu -->
@@ -265,42 +267,42 @@
             <li class="hasSubmenu">
                 <a data-toggle="collapse" href="#menu_forms"><span>Forms</span></a>
                 <ul class="collapse" id="menu_forms">
-                    <li class=""><a href="form_wizards.html?lang=en"><span>Form Wizards</span></a></li>
-                    <li class=""><a href="form_elements.html?lang=en"><span>Form Elements</span></a></li>
-                    <li class=""><a href="form_validator.html?lang=en"><span>Form Validator</span></a></li>
-                    <li class=""><a href="file_managers.html?lang=en"><span>File Managers</span></a></li>
+                    <li class=""><a href="<?=base_url();?>publics/admin/form_wizards.html?lang=en"><span>Form Wizards</span></a></li>
+                    <li class=""><a href="<?=base_url();?>publics/admin/form_elements.html?lang=en"><span>Form Elements</span></a></li>
+                    <li class=""><a href="<?=base_url();?>publics/admin/form_validator.html?lang=en"><span>Form Validator</span></a></li>
+                    <li class=""><a href="<?=base_url();?>publics/admin/file_managers.html?lang=en"><span>File Managers</span></a></li>
                 </ul>
                 <span class="count">4</span>
             </li>
             <!-- // Components Submenu Level 2 END -->
 
             <!-- Components Submenu Regular Items -->
-            <li class=""><a href="ui.html?lang=en"><span>UI Elements</span></a></li>
-            <li class=""><a href="icons.html?lang=en"><span>Icons</span></a></li>
-            <li class=""><a href="widgets.html?lang=en"><span>Widgets</span></a></li>
-            <li class=""><a href="tabs.html?lang=en"><span>Tabs</span></a></li>
-            <li class=""><a href="sliders.html?lang=en"><span>Sliders</span></a></li>
-            <li class=""><a href="charts.html?lang=en"><span>Charts</span></a></li>
+            <li class=""><a href="<?=base_url();?>publics/admin/ui.html?lang=en"><span>UI Elements</span></a></li>
+            <li class=""><a href="<?=base_url();?>publics/admin/icons.html?lang=en"><span>Icons</span></a></li>
+            <li class=""><a href="<?=base_url();?>publics/admin/widgets.html?lang=en"><span>Widgets</span></a></li>
+            <li class=""><a href="<?=base_url();?>publics/admin/tabs.html?lang=en"><span>Tabs</span></a></li>
+            <li class=""><a href="<?=base_url();?>publics/admin/sliders.html?lang=en"><span>Sliders</span></a></li>
+            <li class=""><a href="<?=base_url();?>publics/admin/charts.html?lang=en"><span>Charts</span></a></li>
             <!-- // Components Submenu Regular Items END -->
 
             <!-- Components Submenu Level 2 -->
             <li class="hasSubmenu">
                 <a data-toggle="collapse" href="#menu_tables"><span>Tables</span></a>
                 <ul class="collapse" id="menu_tables">
-                    <li class=""><a href="tables.html?lang=en"><span>Tables</span></a></li>
-                    <li class=""><a href="pricing_tables.html?lang=en"><span>Pricing tables</span></a></li>
+                    <li class=""><a href="<?=base_url();?>publics/admin/tables.html?lang=en"><span>Tables</span></a></li>
+                    <li class=""><a href="<?=base_url();?>publics/admin/pricing_tables.html?lang=en"><span>Pricing tables</span></a></li>
                 </ul>
                 <span class="count">2</span>
             </li>
             <!-- // Components Submenu Level 2 -->
 
             <!-- Components Submenu Regular Items -->
-            <li class=""><a href="grid.html?lang=en"><span>Grid system</span></a></li>
-            <li class=""><a href="notifications.html?lang=en"><span>Notifications</span></a></li>
-            <li class=""><a href="modals.html?lang=en"><span>Modals</span></a></li>
-            <li class=""><a href="thumbnails.html?lang=en"><span>Thumbnails</span></a></li>
-            <li class=""><a href="carousels.html?lang=en"><span>Carousels</span></a></li>
-            <li class=""><a href="tour.html?lang=en"><span>Page Tour</span></a></li>
+            <li class=""><a href="<?=base_url();?>publics/admin/grid.html?lang=en"><span>Grid system</span></a></li>
+            <li class=""><a href="<?=base_url();?>publics/admin/notifications.html?lang=en"><span>Notifications</span></a></li>
+            <li class=""><a href="<?=base_url();?>publics/admin/modals.html?lang=en"><span>Modals</span></a></li>
+            <li class=""><a href="<?=base_url();?>publics/admin/thumbnails.html?lang=en"><span>Thumbnails</span></a></li>
+            <li class=""><a href="<?=base_url();?>publics/admin/carousels.html?lang=en"><span>Carousels</span></a></li>
+            <li class=""><a href="<?=base_url();?>publics/admin/tour.html?lang=en"><span>Page Tour</span></a></li>
             <!-- // Components Submenu Regular Items END -->
 
         </ul>
@@ -312,12 +314,12 @@
     <li class="hasSubmenu glyphicons gift">
         <a data-toggle="collapse" href="#menu_extra"><i></i><span>Extra</span></a>
         <ul class="collapse" id="menu_extra">
-            <li class=""><a href="my_account.html?lang=en"><span>My Account</span></a></li>
-            <li class=""><a href="bookings.html?lang=en"><span>Bookings</span></a></li>
-            <li class=""><a href="finances.html?lang=en"><span>Finances</span></a></li>
-            <li class=""><a href="pages.html?lang=en"><span>Site Pages</span></a></li>
-            <li><a href="error.html?lang=en"><span>Error page</span></a></li>
-            <li><a href="blank.html?lang=en"><span>Blank page</span></a></li>
+            <li class=""><a href="<?=base_url();?>publics/admin/my_account.html?lang=en"><span>My Account</span></a></li>
+            <li class=""><a href="<?=base_url();?>publics/admin/bookings.html?lang=en"><span>Bookings</span></a></li>
+            <li class=""><a href="<?=base_url();?>publics/admin/finances.html?lang=en"><span>Finances</span></a></li>
+            <li class=""><a href="<?=base_url();?>publics/admin/pages.html?lang=en"><span>Site Pages</span></a></li>
+            <li><a href="<?=base_url();?>publics/admin/error.html?lang=en"><span>Error page</span></a></li>
+            <li><a href="<?=base_url();?>publics/admin/blank.html?lang=en"><span>Blank page</span></a></li>
         </ul>
         <span class="count">6</span>
     </li>
@@ -327,8 +329,8 @@
     <li class="hasSubmenu">
         <a data-toggle="collapse" class="glyphicons picture" href="#menu_gallery"><i></i><span>Photo Gallery</span></a>
         <ul class="collapse" id="menu_gallery">
-            <li class=""><a href="gallery_1.html?lang=en"><span>Gallery #1</span></a></li>
-            <li class=""><a href="gallery_2.html?lang=en"><span>Gallery #2</span></a></li>
+            <li class=""><a href="<?=base_url();?>publics/admin/gallery_1.html?lang=en"><span>Gallery #1</span></a></li>
+            <li class=""><a href="<?=base_url();?>publics/admin/gallery_2.html?lang=en"><span>Gallery #2</span></a></li>
         </ul>
         <span class="count">2</span>
     </li>
@@ -341,17 +343,17 @@
             <li class="hasSubmenu">
                 <a data-toggle="collapse" href="#menu_ecommerce_client"><i></i><span>Client interface</span></a>
                 <ul class="collapse" id="menu_ecommerce_client">
-                    <li class=""><a href="shop_client_products.html?lang=en"><span>Products</span></a></li>
-                    <li class=""><a href="shop_client_product.html?lang=en"><span>Product details</span></a></li>
-                    <li class=""><a href="shop_client_cart.html?lang=en"><span>Shopping cart</span></a></li>
+                    <li class=""><a href="<?=base_url();?>publics/admin/shop_client_products.html?lang=en"><span>Products</span></a></li>
+                    <li class=""><a href="<?=base_url();?>publics/admin/shop_client_product.html?lang=en"><span>Product details</span></a></li>
+                    <li class=""><a href="<?=base_url();?>publics/admin/shop_client_cart.html?lang=en"><span>Shopping cart</span></a></li>
                 </ul>
                 <span class="count">3</span>
             </li>
             <li class="hasSubmenu">
                 <a data-toggle="collapse" href="#menu_ecommerce_admin"><i></i><span>Management</span></a>
                 <ul class="collapse" id="menu_ecommerce_admin">
-                    <li class=""><a href="shop_admin_products.html?lang=en"><span>Products</span></a></li>
-                    <li class=""><a href="shop_admin_product.html?lang=en"><span>Add product</span></a></li>
+                    <li class=""><a href="<?=base_url();?>publics/admin/shop_admin_products.html?lang=en"><span>Products</span></a></li>
+                    <li class=""><a href="<?=base_url();?>publics/admin/shop_admin_product.html?lang=en"><span>Add product</span></a></li>
                 </ul>
                 <span class="count">2</span>
             </li>
@@ -361,11 +363,11 @@
     <!-- // Shop Submenu Level 1 END -->
 
     <!-- Menu Regular Items -->
-    <li class="glyphicons tags"><a href="faq.html?lang=en"><i></i><span>FAQ</span></a></li>
-    <li class="glyphicons calendar"><a href="calendar.html?lang=en"><i></i><span>Calendar</span></a></li>
-    <li class="glyphicons lock"><a href="login.html?lang=en"><i></i><span>Login</span></a></li>
-    <li class="glyphicons user_add"><a href="signup.html?lang=en"><i></i><span>Register</span></a></li>
-    <li class="glyphicons credit_card"><a href="invoice.html?lang=en"><i></i><span>Invoice</span></a></li>
+    <li class="glyphicons tags"><a href="<?=base_url();?>publics/admin/faq.html?lang=en"><i></i><span>FAQ</span></a></li>
+    <li class="glyphicons calendar"><a href="<?=base_url();?>publics/admin/calendar.html?lang=en"><i></i><span>Calendar</span></a></li>
+    <li class="glyphicons lock"><a href="<?=base_url();?>publics/admin/login.html?lang=en"><i></i><span>Login</span></a></li>
+    <li class="glyphicons user_add"><a href="<?=base_url();?>publics/admin/signup.html?lang=en"><i></i><span>Register</span></a></li>
+    <li class="glyphicons credit_card"><a href="<?=base_url();?>publics/admin/invoice.html?lang=en"><i></i><span>Invoice</span></a></li>
     <!-- // Menu Regular Items END -->
 
     <!-- Maps Submenu Level 1 -->
@@ -373,7 +375,7 @@
         <a data-toggle="collapse" href="#menu_maps"><i></i><span>Location</span></a>
         <ul class="collapse" id="menu_maps">
             <li class=""><a href="<?=base_url();?>admin/location/province"><span>Province</span></a></li>
-            <li class=""><a href="<?=base_url();?>admin/location/district"><span>District</span></a></li>
+            <li class=""><a href="<?=base_url();?>publics/admin/<?=base_url();?>admin/location/district"><span>District</span></a></li>
         </ul>
         <span class="count">2</span>
     </li>
@@ -420,13 +422,13 @@
 <!-- Larger Menu Style -->
 <ul>
     <li class="heading"><span>Larger menu</span></li>
-    <li class="large glyphicons group"><a href="error.html?lang=en"><i></i><span>Clients</span></a></li>
+    <li class="large glyphicons group"><a href="<?=base_url();?>publics/admin/error.html?lang=en"><i></i><span>Clients</span></a></li>
     <li class="large hasSubmenu glyphicons log_book">
         <a data-toggle="collapse" href="#menu_tasks"><i></i><span>Task Management</span></a>
         <ul class="collapse" id="menu_tasks">
-            <li class=""><a href="tasks.html?lang=en"><span>Tasks Overview</span></a></li>
-            <li class=""><a href="error.html?lang=en"><span>Manage Projects</span></a></li>
-            <li class=""><a href="error.html?lang=en"><span>Manage Team</span></a></li>
+            <li class=""><a href="<?=base_url();?>publics/admin/tasks.html?lang=en"><span>Tasks Overview</span></a></li>
+            <li class=""><a href="<?=base_url();?>publics/admin/error.html?lang=en"><span>Manage Projects</span></a></li>
+            <li class=""><a href="<?=base_url();?>publics/admin/error.html?lang=en"><span>Manage Team</span></a></li>
         </ul>
         <span class="count">3</span>
     </li>
@@ -542,11 +544,11 @@
         <!-- Tabs Widget Heading -->
         <div class="widget-head">
             <ul>
-                <li><a href="#quickIndexTab" data-toggle="tab" class="glyphicons user"><i></i>Profile</a></li>
-                <li class="active"><a href="#quickPhotosTab" data-toggle="tab" class="glyphicons camera"><i></i>Photos</a></li>
-                <li><a href="#quickFriendsTab" data-toggle="tab" class="glyphicons parents"><i></i>Friends</a></li>
-                <li><a href="#quickLocationTab" data-toggle="tab" class="glyphicons google_maps"><i></i>Location</a></li>
-                <li><a href="#quickOtherTab" data-toggle="tab" class="glyphicons retweet"><i></i>Other</a></li>
+                <li><a href="<?=base_url();?>publics/admin/#quickIndexTab" data-toggle="tab" class="glyphicons user"><i></i>Profile</a></li>
+                <li class="active"><a href="<?=base_url();?>publics/admin/#quickPhotosTab" data-toggle="tab" class="glyphicons camera"><i></i>Photos</a></li>
+                <li><a href="<?=base_url();?>publics/admin/#quickFriendsTab" data-toggle="tab" class="glyphicons parents"><i></i>Friends</a></li>
+                <li><a href="<?=base_url();?>publics/admin/#quickLocationTab" data-toggle="tab" class="glyphicons google_maps"><i></i>Location</a></li>
+                <li><a href="<?=base_url();?>publics/admin/#quickOtherTab" data-toggle="tab" class="glyphicons retweet"><i></i>Other</a></li>
             </ul>
         </div>
         <!-- // Tabs Widget Heading END -->
@@ -625,10 +627,10 @@
                     <!-- Tabs -->
                     <div class="tabsbar tabsbar-2">
                         <ul class="row-fluid row-merge">
-                            <li class="glyphicons camera active span3"><a href="gallery_1.html?lang=en"><i></i> View all photos <strong>(43)</strong></a></li>
-                            <li class="glyphicons folder_open span3"><a href="gallery_1.html?lang=en"><i></i> Albums <strong>(3)</strong></a></li>
-                            <li class="glyphicons circle_plus span3"><a href="gallery_1.html?lang=en"><i></i> <span>Add Photos</span></a></li>
-                            <li class="glyphicons folder_plus span3"><a href="gallery_1.html?lang=en"><i></i> <span>Create Album</span></a></li>
+                            <li class="glyphicons camera active span3"><a href="<?=base_url();?>publics/admin/gallery_1.html?lang=en"><i></i> View all photos <strong>(43)</strong></a></li>
+                            <li class="glyphicons folder_open span3"><a href="<?=base_url();?>publics/admin/gallery_1.html?lang=en"><i></i> Albums <strong>(3)</strong></a></li>
+                            <li class="glyphicons circle_plus span3"><a href="<?=base_url();?>publics/admin/gallery_1.html?lang=en"><i></i> <span>Add Photos</span></a></li>
+                            <li class="glyphicons folder_plus span3"><a href="<?=base_url();?>publics/admin/gallery_1.html?lang=en"><i></i> <span>Create Album</span></a></li>
                         </ul>
                     </div>
                     <!-- // Tabs END -->
@@ -1919,73 +1921,9 @@
 <!-- // Sidebar menu & content wrapper END -->
 
 <div id="footer" class="hidden-print">
-
-    <div class="row-fluid">
-        <div class="span8">
-            <div class="row-fluid row-menu">
-                <div class="span3">
-                    <ul class="unstyled">
-                        <li><h4>Get Help</h4>
-                            <ul class="unstyled">
-                                <li><a href="documentation.html?lang=en">Documentation</a></li>
-                                <li><a href="">Aenean augue risus</a></li>
-                                <li><a href="">Maecenas erat dui</a></li>
-                            </ul>
-                        </li>
-                    </ul>
-                </div>
-                <div class="span3">
-                    <ul class="unstyled">
-                        <li><h4>My account</h4>
-                            <ul class="unstyled">
-                                <li><a href="my_account.html?lang=en">Edit account</a></li>
-                                <li><a href="my_account.html?lang=en">Change password</a></li>
-                                <li><a href="login.html?lang=en">Logout</a></li>
-                            </ul>
-                        </li>
-                    </ul>
-                </div>
-                <div class="span3">
-                    <ul class="unstyled">
-                        <li><h4>Other Settings</h4>
-                            <ul class="unstyled">
-                                <li><a href="">Etiam viverra pharetra</a></li>
-                                <li><a href="">Lorem ipsum dolor</a></li>
-                                <li><a href="">Consecteur adipiscing</a></li>
-                            </ul>
-                        </li>
-                    </ul>
-                </div>
-                <div class="span3">
-
-                    <!-- Twitter Section -->
-                    <h5 class="glyphicons single twitter"><i></i> Latest from Twitter</h5>
-                    <section class="twitter-feed">
-                        <div class="row-fluid">
-                            <div class="span12">
-                                <div class="tweet">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin nunc lorem, rutrum non porta. <span class="label label-inverse">01/11/2012</span></div>
-                            </div>
-                            <div class="clearfix"></div>
-                        </div>
-                    </section>
-                    <!-- Twitter Section END -->
-
-                </div>
-            </div>
-        </div>
-        <div class="span4">
-            <div class="right innerAll">
-                <p>If you have any problems using <strong>AdminKIT</strong> v1.3 or you have any suggestions or requests, please contact us. We appreciate all your feedback.</p>
-                <a class="btn btn-primary btn-icon glyphicons envelope" href="mailto:contact@mosaicpro.biz"><i></i> Contact Support</a>
-            </div>
-        </div>
-    </div>
-    <div class="separator bottom"></div>
-
     <!--  Copyright Line -->
     <div class="copy">&copy; 2012 - 2013 - MosaicPro - All Rights Reserved. <a href="http://themeforest.net/item/adminkit-premium-admin-template/4437902?ref=mosaicpro" target="_blank">Purchase this template on ThemeForest</a> - Current version: v1.3 / <a target="_blank" href="http://mosaicpro.biz/adminkit/CHANGELOG">changelog</a></div>
     <!--  End Copyright Line -->
-
 </div>
 <!-- // Footer END -->
 
