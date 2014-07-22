@@ -1,39 +1,19 @@
-<?php
+<?php if ( ! defined('BASEPATH')) exit('No direct script access allowed');
+
 class MY_Admin extends MY_Controller
 {
-    /**
-    * Main Value
-    * 
-    * @var mixed
-    */
-	public $_data = array('content' => '');
-    //----------------------------------------------------------------------------------------------
-    /**
-    * Construct
-    * 
-    */
-    function __construct()
+
+    public function __construct()
     {
         parent::__construct();
-        //Load Model
-        $this->load->model('Authcheck');
-		
-        //$this->checkLogin();
-		
-		//Load thông báo
-        $this->load->library('messenge');
-    } 
-    
-    //----------------------------------------------------------------------------------------------
-    /**
-    * Check login to administrators
-    * 
-    */
-    protected function checkLogin()
+    }
+
+    public function load_view($mod = 'body', $footer = 'footer', $temp = 'admin_default')
     {
-        if(!$this->Authcheck->checkSessionAdmin())
-        {
-            redirect($this->config->item('url_admin').'/login');
-        }    
+        //Set Load Mod
+        $this->config->set_item('layout_load_mod', "{$mod}_view");
+        $this->config->set_item('layout_load_footer', "{$footer}_view");
+        //Load View
+        $this->load->view($temp, $this->_data);
     }
 }

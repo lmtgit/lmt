@@ -1,12 +1,10 @@
 <?php if ( ! defined('BASEPATH')) exit('No direct script access allowed');
+require_once 'application/core/MY_Admin.php';
 
-class Welcome extends CI_Controller {
+class Welcome extends MY_Admin {
 
-	public function index()
-	{
-        $this->load->view('welcome_view');
-	}
+    public function index()
+    {
+        $this->load_view('welcome');
+    }
 }
-
-/* End of file welcome.php */
-/* Location: ./application/controllers/welcome.php */

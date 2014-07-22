@@ -1,82 +1,32 @@
-<?php
-/**
-* Main Controller
-* Dùng để load những cấu hình của Website
-* 
-* @author Tiểu Tinh
-* 2012/02/23
-*/
+<?php if ( ! defined('BASEPATH')) exit('No direct script access allowed');
+
 class MY_Controller extends CI_Controller {
-    
+
+    public $_data = array(
+        'head'      => array(
+            'title'          => '',
+            'keywords'       => '',
+            'description'    => '',
+        ),
+        'content'   => '',
+        'widget'    => '',
+        'footer'    => ''
+    );
+
     /**
-    * Main Value
-    * 
-    * @var mixed
-    */
-    public $_data = array();
-    
-    //----------------------------------------------------------------------------------------------------------------------
-    /**
-    * Construct
-    *  
-    */
-    function __construct()
+     * Construct
+     */
+    public function __construct()
     {
-    	//Construct
         parent::__construct();
-        
-		//Load cache
-		//$this->load->driver('cache', array('adapter' => 'apc', 'backup' => 'file'));
-		
-        //Setting of Website on Database - CACHE
-        $this->_data['settings'] = $this->Msettings->getSettings();
+        $this->load->helper('string');
     }
-}
 
-//----------------------------------------------------------------------------------------------------------------------
-/**
-* Function dùng cho Debug
-* 
-* @author Tiểu Tinh
-* 2011/12/16
-* 
-*/
-function debug2($var)
-{
-	echo '<pre>';
-		print_r($var);
-	echo '</pre>';
-}
-
-//----------------------------------------------------------------------------------------------------------------------
-/**
-* Function dùng cho Debug
-* 
-* @author Tiểu Tinh
-* 2011/12/16
-* 
-*/
-function debug($var)
-{
-    echo '<pre>';
-        var_dump($var);
-    echo '</pre>';    
-}
-
-//----------------------------------------------------------------------------------------------------------------------
-/**
-* Function dùng cho Debug
-* 
-* @author Tiểu Tinh
-* 2011/12/16
-* 
-*/
-function debugArr($var)
-{
-    foreach($var as $var2)
+    public function load_view($mod = 'body', $temp = 'template_default')
     {
-        echo '<pre>';
-        var_dump($var2);
-        echo '</pre>';    
-    }    
+        //Set Load Mod
+        $this->config->set_item('layout_load_mod', "{$mod}_view");
+        //Load View
+        $this->load->view($temp, $this->_data);
+    }
 }
