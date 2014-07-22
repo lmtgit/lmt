@@ -318,48 +318,48 @@
                     <i class="fa fa-angle-left pull-right"></i>
                 </a>
                 <ul class="treeview-menu">
-                    <li><a href="<?=base_url();?>public/admin/pages/charts/morris.html"><i class="fa fa-angle-double-right"></i> List</a></li>
-                    <li><a href="<?=base_url();?>public/admin/pages/charts/flot.html"><i class="fa fa-angle-double-right"></i> Add</a></li>
+                    <li><a href="<?=base_url();?>admin/user"><i class="fa fa-angle-double-right"></i> List</a></li>
+                    <li><a href="<?=base_url();?>admin/user/add"><i class="fa fa-angle-double-right"></i> Add</a></li>
                 </ul>
             </li>
 
             <li class="treeview">
-                <a href="<?=base_url();?>admin/user">
+                <a href="<?=base_url();?>admin/userweb">
                     <i class="fa fa-bar-chart-o"></i>
                     <span>User Web</span>
                     <i class="fa fa-angle-left pull-right"></i>
                 </a>
                 <ul class="treeview-menu">
-                    <li><a href="<?=base_url();?>public/admin/pages/charts/morris.html"><i class="fa fa-angle-double-right"></i> List</a></li>
-                    <li><a href="<?=base_url();?>public/admin/pages/charts/flot.html"><i class="fa fa-angle-double-right"></i> Add</a></li>
+                    <li><a href="<?=base_url();?>admin/userweb"><i class="fa fa-angle-double-right"></i> List</a></li>
+                    <li><a href="<?=base_url();?>admin/userweb/add"><i class="fa fa-angle-double-right"></i> Add</a></li>
                 </ul>
             </li>
 
             <li class="treeview">
-                <a href="<?=base_url();?>admin/user">
+                <a href="<?=base_url();?>admin/location">
                     <i class="fa fa-bar-chart-o"></i>
                     <span>Location</span>
                     <i class="fa fa-angle-left pull-right"></i>
                 </a>
                 <ul class="treeview-menu">
-                    <li><a href="<?=base_url();?>public/admin/pages/charts/morris.html"><i class="fa fa-angle-double-right"></i> List</a></li>
-                    <li><a href="<?=base_url();?>public/admin/pages/charts/flot.html"><i class="fa fa-angle-double-right"></i> List - inActive</a></li>
-                    <li><a href="<?=base_url();?>public/admin/pages/charts/flot.html"><i class="fa fa-angle-double-right"></i> Add</a></li>
+                    <li><a href="<?=base_url();?>admin/location"><i class="fa fa-angle-double-right"></i> List</a></li>
+                    <li><a href="<?=base_url();?>admin/location"><i class="fa fa-angle-double-right"></i> List - inActive</a></li>
+                    <li><a href="<?=base_url();?>admin/location/add"><i class="fa fa-angle-double-right"></i> Add</a></li>
                 </ul>
             </li>
 
 
             <li class="treeview">
-                <a href="<?=base_url();?>admin/user">
+                <a href="<?=base_url();?>admin/destination">
                     <i class="fa fa-bar-chart-o"></i>
                     <span>Location - Loc</span>
                     <i class="fa fa-angle-left pull-right"></i>
                 </a>
                 <ul class="treeview-menu">
-                    <li><a href="<?=base_url();?>public/admin/pages/charts/morris.html"><i class="fa fa-angle-double-right"></i> Destination</a></li>
-                    <li><a href="<?=base_url();?>public/admin/pages/charts/morris.html"><i class="fa fa-angle-double-right"></i> Tip</a></li>
-                    <li><a href="<?=base_url();?>public/admin/pages/charts/flot.html"><i class="fa fa-angle-double-right"></i> Comment</a></li>
-                    <li><a href="<?=base_url();?>public/admin/pages/charts/flot.html"><i class="fa fa-angle-double-right"></i> Gallery</a></li>
+                    <li><a href="<?=base_url();?>admin/destination"><i class="fa fa-angle-double-right"></i> Destination</a></li>
+                    <li><a href="<?=base_url();?>admin/tip"><i class="fa fa-angle-double-right"></i> Tip</a></li>
+                    <li><a href="<?=base_url();?>admin/comment"><i class="fa fa-angle-double-right"></i> Comment</a></li>
+                    <li><a href="<?=base_url();?>admin/gallery"><i class="fa fa-angle-double-right"></i> Gallery</a></li>
                 </ul>
             </li>
 
@@ -370,8 +370,8 @@
                     <i class="fa fa-angle-left pull-right"></i>
                 </a>
                 <ul class="treeview-menu">
-                    <li><a href="<?=base_url();?>public/admin/pages/charts/morris.html"><i class="fa fa-angle-double-right"></i> Province</a></li>
-                    <li><a href="<?=base_url();?>public/admin/pages/charts/morris.html"><i class="fa fa-angle-double-right"></i> District</a></li>
+                    <li><a href="<?=base_url();?>admin/province"><i class="fa fa-angle-double-right"></i> Province</a></li>
+                    <li><a href="<?=base_url();?>admin/district"><i class="fa fa-angle-double-right"></i> District</a></li>
                 </ul>
             </li>
 
