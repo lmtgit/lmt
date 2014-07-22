@@ -1,2198 +1,952 @@
 <!DOCTYPE html>
-<!--[if lt IE 7]> <html class="ie lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
-<!--[if IE 7]>    <html class="ie lt-ie9 lt-ie8"> <![endif]-->
-<!--[if IE 8]>    <html class="ie lt-ie9"> <![endif]-->
-<!--[if gt IE 8]> <html class="ie gt-ie8"> <![endif]-->
-<!--[if !IE]><!--><html><!-- <![endif]-->
+<html>
 <head>
-    <title>AdminKIT - Premium Admin Template (v1.3)</title>
+    <meta charset="UTF-8">
+    <title>AdminLTE | Dashboard</title>
+    <meta content='width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no' name='viewport'>
+    <!-- bootstrap 3.0.2 -->
+    <link href="<?=base_url();?>public/admin/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <!-- font Awesome -->
+    <link href="<?=base_url();?>public/admin/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
+    <!-- Ionicons -->
+    <link href="<?=base_url();?>public/admin/css/ionicons.min.css" rel="stylesheet" type="text/css" />
+    <!-- Morris chart -->
+    <link href="<?=base_url();?>public/admin/css/morris/morris.css" rel="stylesheet" type="text/css" />
+    <!-- jvectormap -->
+    <link href="<?=base_url();?>public/admin/css/jvectormap/jquery-jvectormap-1.2.2.css" rel="stylesheet" type="text/css" />
+    <!-- fullCalendar -->
+    <link href="<?=base_url();?>public/admin/css/fullcalendar/fullcalendar.css" rel="stylesheet" type="text/css" />
+    <!-- Daterange picker -->
+    <link href="<?=base_url();?>public/admin/css/daterangepicker/daterangepicker-bs3.css" rel="stylesheet" type="text/css" />
+    <!-- bootstrap wysihtml5 - text editor -->
+    <link href="<?=base_url();?>public/admin/css/bootstrap-wysihtml5/bootstrap3-wysihtml5.min.css" rel="stylesheet" type="text/css" />
+    <!-- Theme style -->
+    <link href="<?=base_url();?>public/admin/css/AdminLTE.css" rel="stylesheet" type="text/css" />
 
-    <!-- Meta -->
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
-    <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta name="apple-mobile-web-app-status-bar-style" content="black">
-    <meta http-equiv="X-UA-Compatible" content="IE=9; IE=8; IE=7; IE=EDGE" />
-
-    <!-- Bootstrap -->
-    <link href="<?=base_url();?>publics/admin/bootstrap/css/bootstrap.css" rel="stylesheet" />
-    <link href="<?=base_url();?>publics/admin/bootstrap/css/responsive.css" rel="stylesheet" />
-
-    <!-- Glyphicons Font Icons -->
-    <link href="<?=base_url();?>publics/admin/theme/css/glyphicons.css" rel="stylesheet" />
-
-    <!-- Uniform Pretty Checkboxes -->
-    <link href="<?=base_url();?>publics/admin/theme/scripts/plugins/forms/pixelmatrix-uniform/css/uniform.default.css" rel="stylesheet" />
-
-    <!--[if IE]><!--><script src="<?=base_url();?>publics/admin/theme/scripts/plugins/other/excanvas/excanvas.js"></script><!--<![endif]-->
-    <!--[if lt IE 8]><script src="<?=base_url();?>publics/admin/theme/scripts/plugins/other/json2.js"></script><![endif]-->
-
-    <!-- Bootstrap Extended -->
-    <link href="<?=base_url();?>publics/admin/bootstrap/extend/jasny-bootstrap/css/jasny-bootstrap.min.css" rel="stylesheet">
-    <link href="<?=base_url();?>publics/admin/bootstrap/extend/jasny-bootstrap/css/jasny-bootstrap-responsive.min.css" rel="stylesheet">
-    <link href="<?=base_url();?>publics/admin/bootstrap/extend/bootstrap-wysihtml5/css/bootstrap-wysihtml5-0.0.2.css" rel="stylesheet">
-    <link href="<?=base_url();?>publics/admin/bootstrap/extend/bootstrap-select/bootstrap-select.css" rel="stylesheet" />
-    <link href="<?=base_url();?>publics/admin/bootstrap/extend/bootstrap-toggle-buttons/static/stylesheets/bootstrap-toggle-buttons.css" rel="stylesheet" />
-
-    <!-- Select2 Plugin -->
-    <link href="<?=base_url();?>publics/admin/theme/scripts/plugins/forms/select2/select2.css" rel="stylesheet" />
-
-    <!-- DateTimePicker Plugin -->
-    <link href="<?=base_url();?>publics/admin/theme/scripts/plugins/forms/bootstrap-datetimepicker/css/datetimepicker.css" rel="stylesheet" />
-
-    <!-- JQueryUI -->
-    <link href="<?=base_url();?>publics/admin/theme/scripts/plugins/system/jquery-ui/css/smoothness/jquery-ui-1.9.2.custom.min.css" rel="stylesheet" />
-
-    <!-- MiniColors ColorPicker Plugin -->
-    <link href="<?=base_url();?>publics/admin/theme/scripts/plugins/color/jquery-miniColors/jquery.miniColors.css" rel="stylesheet" />
-
-    <!-- Notyfy Notifications Plugin -->
-    <link href="<?=base_url();?>publics/admin/theme/scripts/plugins/notifications/notyfy/jquery.notyfy.css" rel="stylesheet" />
-    <link href="<?=base_url();?>publics/admin/theme/scripts/plugins/notifications/notyfy/themes/default.css" rel="stylesheet" />
-
-    <!-- Gritter Notifications Plugin -->
-    <link href="<?=base_url();?>publics/admin/theme/scripts/plugins/notifications/Gritter/css/jquery.gritter.css" rel="stylesheet" />
-
-    <!-- Easy-pie Plugin -->
-    <link href="<?=base_url();?>publics/admin/theme/scripts/plugins/charts/easy-pie/jquery.easy-pie-chart.css" rel="stylesheet" />
-
-    <!-- Google Code Prettify Plugin -->
-    <link href="<?=base_url();?>publics/admin/theme/scripts/plugins/other/google-code-prettify/prettify.css" rel="stylesheet" />
-
-    <!-- Pageguide Guided Tour Plugin -->
-    <!--[if gt IE 8]><!--><link media="screen" href="<?=base_url();?>publics/admin/theme/scripts/plugins/other/pageguide/css/pageguide.css" rel="stylesheet" /><!--<![endif]-->
-
-    <!-- Bootstrap Image Gallery -->
-    <link href="<?=base_url();?>publics/admin/bootstrap/extend/bootstrap-image-gallery/css/bootstrap-image-gallery.min.css" rel="stylesheet" />
-
-    <!-- Main Theme Stylesheet :: CSS -->
-    <link href="<?=base_url();?>publics/admin/theme/css/style.min.css?1365754760" rel="stylesheet" />
-
-
-    <!-- Google Analytics -->
-    <script type="text/javascript">
-
-	  var _gaq = _gaq || [];
-	  _gaq.push(['_setAccount', 'UA-36057737-1']);
-	  _gaq.push(['_trackPageview']);
-	
-	  (function() {
-	    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-	    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-	    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-	  })();
-	
-	</script>
-
-    <!-- LESS.js Library -->
-    <script src="<?=base_url();?>publics/admin/theme/scripts/plugins/system/less.min.js"></script>
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+    <![endif]-->
 </head>
-<body class="">
-
-<!-- Main Container Fluid -->
-<div class="container-fluid fluid menu-left">
-
-<!-- Top navbar -->
-<div class="navbar main hidden-print">
-
-    <!-- Brand -->
-    <a href="index.html?lang=en" class="appbrand"><span>Lovemetrip <span>vBeta</span></span></a>
-
-    <!-- Menu Toggle Button -->
-    <button type="button" class="btn btn-navbar">
-        <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span>
-    </button>
-    <!-- // Menu Toggle Button END -->
-
-    <!-- Top Menu -->
-    <ul class="topnav pull-left tn1">
-
-        <!-- Themer -->
-        <li class="hidden-phone">
-            <a href="#themer" data-toggle="collapse" class="glyphicons eyedropper"><i></i><span>Themer</span></a>
-            <div id="themer" class="collapse">
-                <div class="wrapper">
-                    <span class="close2">&times; close</span>
-                    <h4>Themer <span>color options</span></h4>
-                    <ul>
-                        <li>Theme: <select id="themer-theme" class="pull-right"></select><div class="clearfix"></div></li>
-                        <li>Primary Color: <input type="text" data-type="minicolors" data-default="#ffffff" data-slider="hue" data-textfield="false" data-position="left" id="themer-primary-cp" /><div class="clearfix"></div></li>
-                        <li>
-                            <span class="link" id="themer-custom-reset">reset theme</span>
-                            <span class="pull-right"><label>advanced <input type="checkbox" value="1" id="themer-advanced-toggle" /></label></span>
-                        </li>
-                    </ul>
-                    <div id="themer-getcode" class="hide">
-                        <hr class="separator" />
-                        <button class="btn btn-primary btn-small pull-right btn-icon glyphicons download" id="themer-getcode-less"><i></i>Get LESS</button>
-                        <button class="btn btn-inverse btn-small pull-right btn-icon glyphicons download" id="themer-getcode-css"><i></i>Get CSS</button>
-                        <div class="clearfix"></div>
-                    </div>
-                </div>
-            </div>
-        </li>
-        <!-- // Themer END -->
-
-    </ul>
-    <!-- // Top Menu END -->
-
-    <!-- Top Menu Right -->
-    <ul class="topnav pull-right">
-
-        <!-- Language menu -->
-        <li class="hidden-phone" id="lang_nav">
-            <a href="#" data-toggle="dropdown"><img src="<?=base_url();?>publics/admin/theme/images/lang/en.png" alt="en" /></a>
-            <ul class="dropdown-menu pull-left">
-                <li class="active"><a href="?page=index&amp;lang=en" title="English"><img src="<?=base_url();?>publics/admin/theme/images/lang/en.png" alt="English"> English</a></li>
-                <li><a href="?page=index&amp;lang=ro" title="Romanian"><img src="<?=base_url();?>publics/admin/theme/images/lang/ro.png" alt="Romanian"> Romanian</a></li>
-                <li><a href="?page=index&amp;lang=it" title="Italian"><img src="<?=base_url();?>publics/admin/theme/images/lang/it.png" alt="Italian"> Italian</a></li>
-                <li><a href="?page=index&amp;lang=fr" title="French"><img src="<?=base_url();?>publics/admin/theme/images/lang/fr.png" alt="French"> French</a></li>
-                <li><a href="?page=index&amp;lang=pl" title="Polish"><img src="<?=base_url();?>publics/admin/theme/images/lang/pl.png" alt="Polish"> Polish</a></li>
-            </ul>
-        </li>
-        <!-- // Language menu END -->
-
-        <!-- Dropdown -->
-        <li class="dropdown visible-abc">
-            <a href="" data-toggle="dropdown" class="glyphicons cogwheel"><i></i>Dropdown <span class="caret"></span></a>
-            <ul class="dropdown-menu pull-right">
-
-                <li class="dropdown submenu">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Level 2</a>
-                    <ul class="dropdown-menu submenu-show submenu-hide pull-left">
-                        <li class="dropdown submenu">
-                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Level 2.1</a>
-                            <ul class="dropdown-menu submenu-show submenu-hide pull-left">
-                                <li><a href="#">Level 2.1.1</a></li>
-                                <li><a href="#">Level 2.1.2</a></li>
-                                <li><a href="#">Level 2.1.3</a></li>
-                                <li><a href="#">Level 2.1.4</a></li>
-                            </ul>
-                        </li>
-                        <li class="dropdown submenu">
-                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Level 2.2</a>
-                            <ul class="dropdown-menu submenu-show submenu-hide pull-left">
-                                <li><a href="#">Level 2.2.1</a></li>
-                                <li><a href="#">Level 2.2.2</a></li>
-                            </ul>
-                        </li>
-                    </ul>
-                </li>
-
-                <li><a href="">Some option</a></li>
-                <li><a href="">Some other option</a></li>
-                <li><a href="">Other option</a></li>
-
-            </ul>
-        </li>
-        <!-- // Dropdown END -->
-
-        <!-- Profile / Logout menu -->
-        <li class="account">
-            <a data-toggle="dropdown" href="my_account.html?lang=en" class="glyphicons logout lock"><span class="hidden-phone text">mosaicpro</span><i></i></a>
-            <ul class="dropdown-menu pull-right">
-                <li><a href="my_account.html?lang=en" class="glyphicons cogwheel">Settings<i></i></a></li>
-                <li><a href="my_account.html?lang=en" class="glyphicons camera">My Photos<i></i></a></li>
-                <li class="highlight profile">
-							<span>
-								<span class="heading">Profile <a href="my_account.html?lang=en" class="pull-right">edit</a></span>
-								<span class="img"></span>
-								<span class="details">
-									<a href="my_account.html?lang=en">Mosaic Pro</a>
-									contact@mosaicpro.biz
-								</span>
-								<span class="clearfix"></span>
-							</span>
+<body class="skin-blue">
+<!-- header logo: style can be found in header.less -->
+<header class="header">
+<a href="<?=base_url();?>public/admin/index.html" class="logo">
+    <!-- Add the class icon to your logo image or logo icon to add the margining -->
+    AdminLTE
+</a>
+<!-- Header Navbar: style can be found in header.less -->
+<nav class="navbar navbar-static-top" role="navigation">
+<!-- Sidebar toggle button-->
+<a href="<?=base_url();?>public/admin/#" class="navbar-btn sidebar-toggle" data-toggle="offcanvas" role="button">
+    <span class="sr-only">Toggle navigation</span>
+    <span class="icon-bar"></span>
+    <span class="icon-bar"></span>
+    <span class="icon-bar"></span>
+</a>
+<div class="navbar-right">
+<ul class="nav navbar-nav">
+<!-- Messages: style can be found in dropdown.less-->
+<li class="dropdown messages-menu">
+    <a href="<?=base_url();?>public/admin/#" class="dropdown-toggle" data-toggle="dropdown">
+        <i class="fa fa-envelope"></i>
+        <span class="label label-success">4</span>
+    </a>
+    <ul class="dropdown-menu">
+        <li class="header">You have 4 messages</li>
+        <li>
+            <!-- inner menu: contains the actual data -->
+            <ul class="menu">
+                <li><!-- start message -->
+                    <a href="<?=base_url();?>public/admin/#">
+                        <div class="pull-left">
+                            <img src="<?=base_url();?>public/admin/img/avatar3.png" class="img-circle" alt="User Image"/>
+                        </div>
+                        <h4>
+                            Support Team
+                            <small><i class="fa fa-clock-o"></i> 5 mins</small>
+                        </h4>
+                        <p>Why not buy a new awesome theme?</p>
+                    </a>
+                </li><!-- end message -->
+                <li>
+                    <a href="<?=base_url();?>public/admin/#">
+                        <div class="pull-left">
+                            <img src="<?=base_url();?>public/admin/img/avatar2.png" class="img-circle" alt="user image"/>
+                        </div>
+                        <h4>
+                            AdminLTE Design Team
+                            <small><i class="fa fa-clock-o"></i> 2 hours</small>
+                        </h4>
+                        <p>Why not buy a new awesome theme?</p>
+                    </a>
                 </li>
                 <li>
-							<span>
-								<a class="btn btn-default btn-mini pull-right" href="login.html?lang=en">Sign Out</a>
-							</span>
+                    <a href="<?=base_url();?>public/admin/#">
+                        <div class="pull-left">
+                            <img src="<?=base_url();?>public/admin/img/avatar.png" class="img-circle" alt="user image"/>
+                        </div>
+                        <h4>
+                            Developers
+                            <small><i class="fa fa-clock-o"></i> Today</small>
+                        </h4>
+                        <p>Why not buy a new awesome theme?</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="<?=base_url();?>public/admin/#">
+                        <div class="pull-left">
+                            <img src="<?=base_url();?>public/admin/img/avatar2.png" class="img-circle" alt="user image"/>
+                        </div>
+                        <h4>
+                            Sales Department
+                            <small><i class="fa fa-clock-o"></i> Yesterday</small>
+                        </h4>
+                        <p>Why not buy a new awesome theme?</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="<?=base_url();?>public/admin/#">
+                        <div class="pull-left">
+                            <img src="<?=base_url();?>public/admin/img/avatar.png" class="img-circle" alt="user image"/>
+                        </div>
+                        <h4>
+                            Reviewers
+                            <small><i class="fa fa-clock-o"></i> 2 days</small>
+                        </h4>
+                        <p>Why not buy a new awesome theme?</p>
+                    </a>
                 </li>
             </ul>
         </li>
-        <!-- // Profile / Logout menu END -->
-
+        <li class="footer"><a href="<?=base_url();?>public/admin/#">See All Messages</a></li>
     </ul>
-    <!-- // Top Menu Right END -->
+</li>
+<!-- Notifications: style can be found in dropdown.less -->
+<li class="dropdown notifications-menu">
+    <a href="<?=base_url();?>public/admin/#" class="dropdown-toggle" data-toggle="dropdown">
+        <i class="fa fa-warning"></i>
+        <span class="label label-warning">10</span>
+    </a>
+    <ul class="dropdown-menu">
+        <li class="header">You have 10 notifications</li>
+        <li>
+            <!-- inner menu: contains the actual data -->
+            <ul class="menu">
+                <li>
+                    <a href="<?=base_url();?>public/admin/#">
+                        <i class="ion ion-ios7-people info"></i> 5 new members joined today
+                    </a>
+                </li>
+                <li>
+                    <a href="<?=base_url();?>public/admin/#">
+                        <i class="fa fa-warning danger"></i> Very long description here that may not fit into the page and may cause design problems
+                    </a>
+                </li>
+                <li>
+                    <a href="<?=base_url();?>public/admin/#">
+                        <i class="fa fa-users warning"></i> 5 new members joined
+                    </a>
+                </li>
 
-</div>
-<!-- Top navbar END -->
-
-<!-- Sidebar menu & content wrapper -->
-<div id="wrapper">
-
-<!-- Sidebar Menu -->
-<div id="menu" class="hidden-phone hidden-print">
-
-<!-- Scrollable menu wrapper with Maximum height -->
-<div class="slim-scroll" data-scroll-height="800px">
-
-<!-- Sidebar Profile -->
-			<span class="profile">
-				<a class="img" href="my_account.html?lang=en"><img src="<?=base_url();?>publics/admin/theme/images/mrawesome.jpg" alt="Mr. Awesome" /></a>
-				<span>
-					<strong>Welcome</strong>
-					<a href="my_account.html?lang=en" class="glyphicons right_arrow">mosaicpro <i></i></a>
-				</span>
-			</span>
-<!-- // Sidebar Profile END -->
-
-<!-- Sidebar Mini Stats -->
-<!--
-<div id="notif">
-    <ul>
-        <li><a href="" class="glyphicons envelope"><i></i> 5</a></li>
-        <li><a href="" class="glyphicons shopping_cart"><i></i> 1</a></li>
-        <li><a href="" class="glyphicons log_book"><i></i> 3</a></li>
-        <li><a href="" class="glyphicons user_add"><i></i> 14</a></li>
-    </ul>
-</div>
--->
-<!-- // Sidebar Mini Stats END -->
-
-<!-- Regular Size Menu -->
-<ul>
-
-
-    <!-- Menu Regular Item -->
-    <li class="glyphicons display active"><a href="<?=base_url();?>admin/dashboard"><i></i><span>Dashboard</span></a></li>
-
-    <!-- Components Submenu Level 1 -->
-    <li class="hasSubmenu glyphicons cogwheels">
-        <a data-toggle="collapse" href="#menu_components"><i></i><span>Components</span></a>
-        <ul class="collapse" id="menu_components">
-
-            <!-- Components Submenu Level 2 -->
-            <li class="hasSubmenu">
-                <a data-toggle="collapse" href="#menu_forms"><span>Forms</span></a>
-                <ul class="collapse" id="menu_forms">
-                    <li class=""><a href="<?=base_url();?>publics/admin/form_wizards.html?lang=en"><span>Form Wizards</span></a></li>
-                    <li class=""><a href="<?=base_url();?>publics/admin/form_elements.html?lang=en"><span>Form Elements</span></a></li>
-                    <li class=""><a href="<?=base_url();?>publics/admin/form_validator.html?lang=en"><span>Form Validator</span></a></li>
-                    <li class=""><a href="<?=base_url();?>publics/admin/file_managers.html?lang=en"><span>File Managers</span></a></li>
-                </ul>
-                <span class="count">4</span>
-            </li>
-            <!-- // Components Submenu Level 2 END -->
-
-            <!-- Components Submenu Regular Items -->
-            <li class=""><a href="<?=base_url();?>publics/admin/ui.html?lang=en"><span>UI Elements</span></a></li>
-            <li class=""><a href="<?=base_url();?>publics/admin/icons.html?lang=en"><span>Icons</span></a></li>
-            <li class=""><a href="<?=base_url();?>publics/admin/widgets.html?lang=en"><span>Widgets</span></a></li>
-            <li class=""><a href="<?=base_url();?>publics/admin/tabs.html?lang=en"><span>Tabs</span></a></li>
-            <li class=""><a href="<?=base_url();?>publics/admin/sliders.html?lang=en"><span>Sliders</span></a></li>
-            <li class=""><a href="<?=base_url();?>publics/admin/charts.html?lang=en"><span>Charts</span></a></li>
-            <!-- // Components Submenu Regular Items END -->
-
-            <!-- Components Submenu Level 2 -->
-            <li class="hasSubmenu">
-                <a data-toggle="collapse" href="#menu_tables"><span>Tables</span></a>
-                <ul class="collapse" id="menu_tables">
-                    <li class=""><a href="<?=base_url();?>publics/admin/tables.html?lang=en"><span>Tables</span></a></li>
-                    <li class=""><a href="<?=base_url();?>publics/admin/pricing_tables.html?lang=en"><span>Pricing tables</span></a></li>
-                </ul>
-                <span class="count">2</span>
-            </li>
-            <!-- // Components Submenu Level 2 -->
-
-            <!-- Components Submenu Regular Items -->
-            <li class=""><a href="<?=base_url();?>publics/admin/grid.html?lang=en"><span>Grid system</span></a></li>
-            <li class=""><a href="<?=base_url();?>publics/admin/notifications.html?lang=en"><span>Notifications</span></a></li>
-            <li class=""><a href="<?=base_url();?>publics/admin/modals.html?lang=en"><span>Modals</span></a></li>
-            <li class=""><a href="<?=base_url();?>publics/admin/thumbnails.html?lang=en"><span>Thumbnails</span></a></li>
-            <li class=""><a href="<?=base_url();?>publics/admin/carousels.html?lang=en"><span>Carousels</span></a></li>
-            <li class=""><a href="<?=base_url();?>publics/admin/tour.html?lang=en"><span>Page Tour</span></a></li>
-            <!-- // Components Submenu Regular Items END -->
-
-        </ul>
-        <span class="count">18</span>
-    </li>
-    <!-- Components Submenu Level 1 END -->
-
-    <!-- Extra Submenu Level 1 -->
-    <li class="hasSubmenu glyphicons gift">
-        <a data-toggle="collapse" href="#menu_extra"><i></i><span>Extra</span></a>
-        <ul class="collapse" id="menu_extra">
-            <li class=""><a href="<?=base_url();?>publics/admin/my_account.html?lang=en"><span>My Account</span></a></li>
-            <li class=""><a href="<?=base_url();?>publics/admin/bookings.html?lang=en"><span>Bookings</span></a></li>
-            <li class=""><a href="<?=base_url();?>publics/admin/finances.html?lang=en"><span>Finances</span></a></li>
-            <li class=""><a href="<?=base_url();?>publics/admin/pages.html?lang=en"><span>Site Pages</span></a></li>
-            <li><a href="<?=base_url();?>publics/admin/error.html?lang=en"><span>Error page</span></a></li>
-            <li><a href="<?=base_url();?>publics/admin/blank.html?lang=en"><span>Blank page</span></a></li>
-        </ul>
-        <span class="count">6</span>
-    </li>
-    <!-- // Extra Submenu Level 1 END -->
-
-    <!-- Gallery Submenu Level 1 -->
-    <li class="hasSubmenu">
-        <a data-toggle="collapse" class="glyphicons picture" href="#menu_gallery"><i></i><span>Photo Gallery</span></a>
-        <ul class="collapse" id="menu_gallery">
-            <li class=""><a href="<?=base_url();?>publics/admin/gallery_1.html?lang=en"><span>Gallery #1</span></a></li>
-            <li class=""><a href="<?=base_url();?>publics/admin/gallery_2.html?lang=en"><span>Gallery #2</span></a></li>
-        </ul>
-        <span class="count">2</span>
-    </li>
-    <!-- // Gallery Submenu Level 1 END -->
-
-    <!-- Shop Submenu Level 1 -->
-    <li class="hasSubmenu">
-        <a data-toggle="collapse" class="glyphicons shopping_cart" href="#menu_ecommerce"><i></i><span>Online Shop</span></a>
-        <ul class="collapse" id="menu_ecommerce">
-            <li class="hasSubmenu">
-                <a data-toggle="collapse" href="#menu_ecommerce_client"><i></i><span>Client interface</span></a>
-                <ul class="collapse" id="menu_ecommerce_client">
-                    <li class=""><a href="<?=base_url();?>publics/admin/shop_client_products.html?lang=en"><span>Products</span></a></li>
-                    <li class=""><a href="<?=base_url();?>publics/admin/shop_client_product.html?lang=en"><span>Product details</span></a></li>
-                    <li class=""><a href="<?=base_url();?>publics/admin/shop_client_cart.html?lang=en"><span>Shopping cart</span></a></li>
-                </ul>
-                <span class="count">3</span>
-            </li>
-            <li class="hasSubmenu">
-                <a data-toggle="collapse" href="#menu_ecommerce_admin"><i></i><span>Management</span></a>
-                <ul class="collapse" id="menu_ecommerce_admin">
-                    <li class=""><a href="<?=base_url();?>publics/admin/shop_admin_products.html?lang=en"><span>Products</span></a></li>
-                    <li class=""><a href="<?=base_url();?>publics/admin/shop_admin_product.html?lang=en"><span>Add product</span></a></li>
-                </ul>
-                <span class="count">2</span>
-            </li>
-        </ul>
-        <span class="count">5</span>
-    </li>
-    <!-- // Shop Submenu Level 1 END -->
-
-    <!-- Menu Regular Items -->
-    <li class="glyphicons tags"><a href="<?=base_url();?>publics/admin/faq.html?lang=en"><i></i><span>FAQ</span></a></li>
-    <li class="glyphicons calendar"><a href="<?=base_url();?>publics/admin/calendar.html?lang=en"><i></i><span>Calendar</span></a></li>
-    <li class="glyphicons lock"><a href="<?=base_url();?>publics/admin/login.html?lang=en"><i></i><span>Login</span></a></li>
-    <li class="glyphicons user_add"><a href="<?=base_url();?>publics/admin/signup.html?lang=en"><i></i><span>Register</span></a></li>
-    <li class="glyphicons credit_card"><a href="<?=base_url();?>publics/admin/invoice.html?lang=en"><i></i><span>Invoice</span></a></li>
-    <!-- // Menu Regular Items END -->
-
-    <!-- Maps Submenu Level 1 -->
-    <li class="hasSubmenu glyphicons google_maps">
-        <a data-toggle="collapse" href="#menu_maps"><i></i><span>Location</span></a>
-        <ul class="collapse" id="menu_maps">
-            <li class=""><a href="<?=base_url();?>admin/location/province"><span>Province</span></a></li>
-            <li class=""><a href="<?=base_url();?>publics/admin/<?=base_url();?>admin/location/district"><span>District</span></a></li>
-        </ul>
-        <span class="count">2</span>
-    </li>
-    <!-- // Maps Submenu Level 1 END -->
-
-</ul>
-<div class="clearfix"></div>
-<div class="separator bottom"></div>
-<!-- // Regular Size Menu END -->
-
-<!-- Sidebar Stats Widgets -->
-<div class="widget-sidebar-stats">
-    <strong>3,540</strong>
-    <span>Messages</span>
-    <span class="pull-right sparkline"></span>
-    <div class="clearfix"></div>
-</div>
-<div class="widget-sidebar-stats">
-    <strong>2,510,402</strong>
-    <span>Photos</span>
-    <span class="pull-right sparkline"></span>
-    <div class="clearfix"></div>
-</div>
-<div class="separator bottom"></div>
-<!-- // Sidebar Stats Widgets END -->
-
-<!-- Stats Widget -->
-<a href="" class="widget-stats widget-stats-2 widget-stats-easy-pie widget-sidebar-stats txt-single">
-    <div data-percent="90" class="easy-pie primary"><span class="value">90</span>%</div>
-    <span class="txt">Completed tasks</span>
-    <div class="clearfix"></div>
-</a>
-<!-- // Stats Widget END -->
-
-<!-- Stats Widget -->
-<a href="" class="widget-stats widget-stats-2 widget-stats-3 widget-sidebar-stats black margin-bottom-none">
-    <span class="sparkline success"></span>
-    <span class="txt"><span class="count">12,566</span> Photos</span>
-    <div class="clearfix"></div>
-</a>
-<div class="separator bottom"></div>
-<!-- // Stats Widget END -->
-
-<!-- Larger Menu Style -->
-<ul>
-    <li class="heading"><span>Larger menu</span></li>
-    <li class="large glyphicons group"><a href="<?=base_url();?>publics/admin/error.html?lang=en"><i></i><span>Clients</span></a></li>
-    <li class="large hasSubmenu glyphicons log_book">
-        <a data-toggle="collapse" href="#menu_tasks"><i></i><span>Task Management</span></a>
-        <ul class="collapse" id="menu_tasks">
-            <li class=""><a href="<?=base_url();?>publics/admin/tasks.html?lang=en"><span>Tasks Overview</span></a></li>
-            <li class=""><a href="<?=base_url();?>publics/admin/error.html?lang=en"><span>Manage Projects</span></a></li>
-            <li class=""><a href="<?=base_url();?>publics/admin/error.html?lang=en"><span>Manage Team</span></a></li>
-        </ul>
-        <span class="count">3</span>
-    </li>
-</ul>
-<div class="clearfix"></div>
-<!-- // Larger Menu Style END -->
-
-<!-- Sidebar Stats Widgets -->
-<div class="separator bottom"></div>
-<div class="widget-sidebar-stats">
-    <span>HDD <strong class="pull-right">80% used</strong></span>
-    <div class="progress progress-danger">
-        <div class="bar" style="width: 80%;"></div>
-    </div>
-    <div class="clearfix"></div>
-
-</div>
-<div class="widget-sidebar-stats">
-    <span>Mail <strong class="pull-right">65% used</strong></span>
-    <div class="progress progress-success">
-        <div class="bar" style="width: 65%;"></div>
-    </div>
-    <div class="clearfix"></div>
-</div>
-<div class="widget-sidebar-stats">
-    <h5>Generic widget</h5>
-    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
-</div>
-<!-- // Sidebar Stats Widgets END -->
-
-<!-- Menu Position Change -->
-<div class="separator top uniformjs menu_js hidden-phone">
-    <div class="innerLR">
-        <label for="toggle-menu-position" class="checkbox">
-            <input type="checkbox" class="checkbox" id="toggle-menu-position" />
-            right menu
-        </label>
-    </div>
-</div>
-<!-- // Menu Position Change END -->
-
-<!-- Layout Type Change -->
-<div class="uniformjs layout_js hidden-phone">
-    <div class="innerLR">
-        <label for="toggle-layout" class="checkbox">
-            <input type="checkbox" class="checkbox" id="toggle-layout" />
-            fixed layout
-        </label>
-    </div>
-</div>
-<!-- // Layout Type Change END -->
-
-</div>
-<!-- // Scrollable Menu wrapper with Maximum Height END -->
-
-</div>
-<!-- // Sidebar Menu END -->
-
-<!-- Content -->
-<div id="content">
-<!-- Filters -->
-<div class="filter-bar dark margin-bottom-none border-none">
-    <form>
-
-        <!-- Search -->
-        <div class="pull-left">
-            <div class="input-append">
-                <input type="text" name="from" class="input-mini" style="width: 100px;" placeholder="Quick search .." />
-                <button type="submit" class="add-on glyphicons search"><i></i></button>
-            </div>
-        </div>
-        <!-- // Search END -->
-
-        <!-- Filters Visible on Desktop only -->
-        <div class="helper visible-desktop pull-right">
-            <div class="helper pull-right">
-
-                <!-- From Filter -->
-                <div class="pull-left">
-                    <label>From:</label>
-                    <div class="input-append">
-                        <input type="text" name="from" id="dateRangeFrom" class="input-mini" value="08/05/13" style="width: 53px;" />
-                        <span class="add-on glyphicons calendar"><i></i></span>
-                    </div>
-                </div>
-                <!-- // From Filter END -->
-
-                <!-- To Filter -->
-                <div class="pull-left">
-                    <label>To:</label>
-                    <div class="input-append">
-                        <input type="text" name="to" id="dateRangeTo" class="input-mini" value="08/18/13" style="width: 53px;" />
-                        <span class="add-on glyphicons calendar"><i></i></span>
-                    </div>
-                </div>
-                <!-- // To Filter END -->
-
-            </div>
-            <div class="clearfix"></div>
-        </div>
-        <!-- // Filters Visible on Desktop only END -->
-
-    </form>
-</div>
-<!-- // Filters END -->
-
-<h3 class="heading-mosaic">Overview</h3>
-<div class="innerLR">
-
-    <!-- Quick Tabs Widget -->
-    <div class="widget widget-tabs widget-quick hidden-print">
-
-        <!-- Tabs Widget Heading -->
-        <div class="widget-head">
-            <ul>
-                <li><a href="<?=base_url();?>publics/admin/#quickIndexTab" data-toggle="tab" class="glyphicons user"><i></i>Profile</a></li>
-                <li class="active"><a href="<?=base_url();?>publics/admin/#quickPhotosTab" data-toggle="tab" class="glyphicons camera"><i></i>Photos</a></li>
-                <li><a href="<?=base_url();?>publics/admin/#quickFriendsTab" data-toggle="tab" class="glyphicons parents"><i></i>Friends</a></li>
-                <li><a href="<?=base_url();?>publics/admin/#quickLocationTab" data-toggle="tab" class="glyphicons google_maps"><i></i>Location</a></li>
-                <li><a href="<?=base_url();?>publics/admin/#quickOtherTab" data-toggle="tab" class="glyphicons retweet"><i></i>Other</a></li>
+                <li>
+                    <a href="<?=base_url();?>public/admin/#">
+                        <i class="ion ion-ios7-cart success"></i> 25 sales made
+                    </a>
+                </li>
+                <li>
+                    <a href="<?=base_url();?>public/admin/#">
+                        <i class="ion ion-ios7-person danger"></i> You changed your username
+                    </a>
+                </li>
             </ul>
-        </div>
-        <!-- // Tabs Widget Heading END -->
-
-        <div class="widget-body">
-            <div class="tab-content">
-
-                <!-- Quick Index Tab -->
-                <div class="tab-pane" id="quickIndexTab">
-                    <div class="row-fluid">
-                        <div class="span2 center">
-
-                            <!-- Profile Photo -->
-                            <a href="" class="thumb"><img src="http://dummyimage.com/400x400/232323/ffffff&amp;text=photo" alt="Profile" /></a>
-                            <div class="separator bottom"></div>
-                            <!-- // Profile Photo END -->
-
-                            <!-- Social Icons -->
-                            <a href="" class="glyphicons standard primary facebook"><i></i></a>
-                            <a href="" class="glyphicons standard twitter"><i></i></a>
-                            <a href="" class="glyphicons standard linked_in"><i></i></a>
-                            <!-- // Social Icons END -->
-
-                        </div>
-                        <div class="span6">
-
-                            <!-- About -->
-                            <h5>Mr.Awesome</h5>
-                            <div class="menubar links primary">
-                                <ul>
-                                    <li>Link widget:</li>
-                                    <li><a href="">Button 1</a></li>
-                                    <li class="divider"></li>
-                                    <li><a href="">Button 2</a></li>
-                                    <li class="divider"></li>
-                                    <li><a href="">Button 3</a></li>
-                                </ul>
+        </li>
+        <li class="footer"><a href="<?=base_url();?>public/admin/#">View all</a></li>
+    </ul>
+</li>
+<!-- Tasks: style can be found in dropdown.less -->
+<li class="dropdown tasks-menu">
+    <a href="<?=base_url();?>public/admin/#" class="dropdown-toggle" data-toggle="dropdown">
+        <i class="fa fa-tasks"></i>
+        <span class="label label-danger">9</span>
+    </a>
+    <ul class="dropdown-menu">
+        <li class="header">You have 9 tasks</li>
+        <li>
+            <!-- inner menu: contains the actual data -->
+            <ul class="menu">
+                <li><!-- Task item -->
+                    <a href="<?=base_url();?>public/admin/#">
+                        <h3>
+                            Design some buttons
+                            <small class="pull-right">20%</small>
+                        </h3>
+                        <div class="progress xs">
+                            <div class="progress-bar progress-bar-aqua" style="width: 20%" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100">
+                                <span class="sr-only">20% Complete</span>
                             </div>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas convallis porta purus, pulvinar mattis nulla tempus ut. Curabitur quis dui orci. Ut nisi dolor, dignissim a aliquet quis, vulputate id dui. Proin ultrices ultrices ligula, dictum varius turpis faucibus non. Curabitur faucibus ultrices nunc, nec aliquet leo tempor cursus.</p>
-                            <!-- // About END -->
-
-                            <!-- Twitter Section -->
-                            <h5 class="glyphicons single twitter"><i></i> Latest from Twitter</h5>
-                            <section class="twitter-feed">
-                                <div class="row-fluid">
-                                    <div class="span12">
-                                        <div class="tweet">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin nunc lorem, rutrum non porta. <span class="label label-inverse">01/11/2012</span></div>
-                                    </div>
-                                    <div class="clearfix"></div>
-                                </div>
-                            </section>
-                            <!-- Twitter Section END -->
-
                         </div>
-                        <div class="span4">
-
-                            <!-- Bio -->
-                            <h5>Bio <span>Personal information</span></h5>
-                            <div class="separator bottom"></div>
-                            <ul class="unstyled icons">
-                                <li class="glyphicons birthday_cake"><i></i> <span class="label">10</span> <span class="label">July</span> <span class="label">1986</span></li>
-                                <li class="glyphicons tie"><i></i> Working at <a href="http://www.mosaicpro.biz">MosaicPro</a></li>
-                                <li class="glyphicons certificate"><i></i> Adobe Photoshop Certification</li>
-                                <li class="glyphicons microphone"><i></i> English :: French :: Italian :: Romanian :: Polish</li>
-                            </ul>
-                            <!-- // Bio END -->
-
+                    </a>
+                </li><!-- end task item -->
+                <li><!-- Task item -->
+                    <a href="<?=base_url();?>public/admin/#">
+                        <h3>
+                            Create a nice theme
+                            <small class="pull-right">40%</small>
+                        </h3>
+                        <div class="progress xs">
+                            <div class="progress-bar progress-bar-green" style="width: 40%" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100">
+                                <span class="sr-only">40% Complete</span>
+                            </div>
                         </div>
-                    </div>
-                </div>
-                <!-- // Quick Index Tab END -->
-
-                <!-- Quick Photos Tab -->
-                <div class="tab-pane active" id="quickPhotosTab">
-
-                    <!-- Tabs -->
-                    <div class="tabsbar tabsbar-2">
-                        <ul class="row-fluid row-merge">
-                            <li class="glyphicons camera active span3"><a href="<?=base_url();?>publics/admin/gallery_1.html?lang=en"><i></i> View all photos <strong>(43)</strong></a></li>
-                            <li class="glyphicons folder_open span3"><a href="<?=base_url();?>publics/admin/gallery_1.html?lang=en"><i></i> Albums <strong>(3)</strong></a></li>
-                            <li class="glyphicons circle_plus span3"><a href="<?=base_url();?>publics/admin/gallery_1.html?lang=en"><i></i> <span>Add Photos</span></a></li>
-                            <li class="glyphicons folder_plus span3"><a href="<?=base_url();?>publics/admin/gallery_1.html?lang=en"><i></i> <span>Create Album</span></a></li>
-                        </ul>
-                    </div>
-                    <!-- // Tabs END -->
-
-                    <!-- Gallery Layout -->
-                    <div class="gallery gallery-2">
-                        <ul class="row-fluid" data-toggle="modal-gallery" data-target="#modal-gallery" id="gallery-4" data-delegate="#gallery-4">
-                            <li class="span2"><a class="thumb" href="<?=base_url();?>publics/admin/theme/images/gallery-2/1.jpg" data-gallery="gallery"><img src="<?=base_url();?>publics/admin/theme/images/gallery-2/1.jpg" alt="photo" /></a></li>
-                            <li class="span2"><a class="thumb" href="<?=base_url();?>publics/admin/theme/images/gallery-2/2.jpg" data-gallery="gallery"><img src="<?=base_url();?>publics/admin/theme/images/gallery-2/2.jpg" alt="photo" /></a></li>
-                            <li class="span2"><a class="thumb" href="<?=base_url();?>publics/admin/theme/images/gallery-2/3.jpg" data-gallery="gallery"><img src="<?=base_url();?>publics/admin/theme/images/gallery-2/3.jpg" alt="photo" /></a></li>
-                            <li class="span2 hidden-phone"><a class="thumb" href="<?=base_url();?>publics/admin/theme/images/gallery-2/4.jpg" data-gallery="gallery"><img src="<?=base_url();?>publics/admin/theme/images/gallery-2/4.jpg" alt="photo" /></a></li>
-                            <li class="span2 hidden-phone"><a class="thumb" href="<?=base_url();?>publics/admin/theme/images/gallery-2/5.jpg" data-gallery="gallery"><img src="<?=base_url();?>publics/admin/theme/images/gallery-2/5.jpg" alt="photo" /></a></li>
-                            <li class="span2 hidden-phone"><a class="thumb" href="<?=base_url();?>publics/admin/theme/images/gallery-2/6.jpg" data-gallery="gallery"><img src="<?=base_url();?>publics/admin/theme/images/gallery-2/6.jpg" alt="photo" /></a></li>
-                        </ul>
-                    </div>
-                    <!-- // Gallery Layout END -->
-
-                    <!-- Pagination -->
-                    <div class="btn-group">
-                        <a class="btn disabled btn-small btn-default glyphicons standard chevron-left"><i></i></a>
-                        <a class="btn btn-small btn-default glyphicons standard chevron-right"><i></i></a>
-                    </div>
-                    <span class="innerLR">1-6 out of 43</span>
-                    <!-- // Pagination END -->
-
-                </div>
-                <!-- // Quick Photos Tab END -->
-
-                <!-- Quick Friends Tab -->
-                <div class="tab-pane" id="quickFriendsTab">
-                    <h5 class="margin-none">Just a tab</h5>
-                    <p class="margin-bottom-none">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
-                </div>
-                <!-- // Quick Friends Tab END -->
-
-                <!-- Quick Location Tab -->
-                <div class="tab-pane" id="quickLocationTab">
-                    <h5 class="margin-none">Just a tab</h5>
-                    <p class="margin-bottom-none">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
-                </div>
-                <!-- // Quick Location Tab END -->
-
-                <!-- Quick Other Tab -->
-                <div class="tab-pane" id="quickOtherTab">
-                    <h5 class="margin-none">Just a tab</h5>
-                    <p class="margin-bottom-none">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
-                </div>
-                <!-- // Quick Other Tab END -->
-
-            </div>
-            <div class="ribbon-wrapper"><div class="ribbon primary">profile</div></div>
-        </div>
-    </div>
-    <!-- // Quick Tabs Widget END -->
-
-</div>
-
-<!-- Row -->
-<div class="row-fluid row-merge border-top">
-
-<!-- Column -->
-<div class="span7">
-
-<!-- Spacing -->
-<div class="innerAll">
-
-<!-- Recent Activity -->
-<div class="widget widget-4 widget-tabs-icons-only widget-timeline margin-bottom-none">
-
-<!-- Widget Heading -->
-<div class="widget-head">
-    <h4 class="heading">Recent Activity <span>timeline</span></h4>
-
-    <!-- Filters Tabs -->
-    <ul class="pull-right">
-        <li>Filter by</li>
-        <li class="glyphicons user_add"><span data-toggle="tab" data-target="#filterUsersTab"><i></i></span></li>
-        <li class="glyphicons shopping_cart active"><span data-toggle="tab" data-target="#filterOrdersTab"><i></i></span></li>
-        <li class="glyphicons envelope"><span data-toggle="tab" data-target="#filterMessagesTab"><i></i></span></li>
-        <li class="glyphicons link"><span data-toggle="tab" data-target="#filterLinksTab"><i></i></span></li>
-        <li class="glyphicons camera"><span data-toggle="tab" data-target="#filterPhotosTab"><i></i></span></li>
-    </ul>
-    <div class="clearfix"></div>
-    <!-- // Filters Tabs END -->
-
-</div>
-<!-- Widget Heading END -->
-
-<div class="widget-body">
-<div class="tab-content">
-
-
-<!-- Filter Users Tab -->
-<div class="tab-pane" id="filterUsersTab">
-    <ul class="list-timeline">
-
-        <!-- Activity item -->
-        <li>
-            <span class="date">21/03</span>
-            <span class="glyphicons activity-icon user_add"><i></i></span>
-            <span class="ellipsis"><a href="">Jane Doe</a> registered at <a href="">Darius Jackson's</a> suggestion.</span>
-            <div class="clearfix"></div>
-        </li>
-        <!-- // Activity item END -->
-        <!-- Activity item -->
-        <li>
-            <span class="date">21/03</span>
-            <span class="glyphicons activity-icon user_add"><i></i></span>
-            <span class="ellipsis"><a href="">Martin Glades</a> registered at <a href="">Darius Jackson's</a> suggestion.</span>
-            <div class="clearfix"></div>
-        </li>
-        <!-- // Activity item END -->
-        <!-- Activity item -->
-        <li>
-            <span class="date">21/03</span>
-            <span class="glyphicons activity-icon user_add"><i></i></span>
-            <span class="ellipsis"><a href="">John Doe</a> registered at <a href="">Melisa Ragae's</a> suggestion.</span>
-            <div class="clearfix"></div>
-        </li>
-        <!-- // Activity item END -->
-        <!-- Activity item -->
-        <li>
-            <span class="date">21/03</span>
-            <span class="glyphicons activity-icon user_add"><i></i></span>
-            <span class="ellipsis"><a href="">John Doe</a> registered at <a href="">Darius Jackson's</a> suggestion.</span>
-            <div class="clearfix"></div>
-        </li>
-        <!-- // Activity item END -->
-        <!-- Activity item -->
-        <li>
-            <span class="date">21/03</span>
-            <span class="glyphicons activity-icon user_add"><i></i></span>
-            <span class="ellipsis"><a href="">Jane Doe</a> registered at <a href="">Darius Jackson's</a> suggestion.</span>
-            <div class="clearfix"></div>
-        </li>
-        <!-- // Activity item END -->
-        <!-- Activity item -->
-        <li>
-            <span class="date">21/03</span>
-            <span class="glyphicons activity-icon user_add"><i></i></span>
-            <span class="ellipsis"><a href="">Darius Jackson</a> registered at <a href="">Darius Jackson's</a> suggestion.</span>
-            <div class="clearfix"></div>
-        </li>
-        <!-- // Activity item END -->
-        <!-- Activity item -->
-        <li>
-            <span class="date">21/03</span>
-            <span class="glyphicons activity-icon user_add"><i></i></span>
-            <span class="ellipsis"><a href="">Melisa Ragae</a> registered at <a href="">Melisa Ragae's</a> suggestion.</span>
-            <div class="clearfix"></div>
-        </li>
-        <!-- // Activity item END -->
-
-    </ul>
-    <a href="" class="btn btn-primary view-all">View all</a>
-</div>
-<!-- // Filter Users Tab END -->
-
-<!-- Filter Orders Tab -->
-<div class="tab-pane active" id="filterOrdersTab">
-    <ul class="list-timeline">
-
-        <!-- Activity item -->
-        <li>
-            <span class="date">21/03</span>
-            <span class="glyphicons activity-icon shopping_cart"><i></i></span>
-            <span class="ellipsis"><a href="">Jane Doe</a> bought 10 items worth of &euro;50 (<a href="">order #2301</a>)</span>
-            <div class="clearfix"></div>
-        </li>
-        <!-- // Activity item END -->
-        <!-- Activity item -->
-        <li>
-            <span class="date">21/03</span>
-            <span class="glyphicons activity-icon shopping_cart"><i></i></span>
-            <span class="ellipsis"><a href="">Darius Jackson</a> bought 10 items worth of &euro;50 (<a href="">order #2302</a>)</span>
-            <div class="clearfix"></div>
-        </li>
-        <!-- // Activity item END -->
-        <!-- Activity item -->
-        <li>
-            <span class="date">21/03</span>
-            <span class="glyphicons activity-icon shopping_cart"><i></i></span>
-            <span class="ellipsis"><a href="">Melisa Ragae</a> bought 10 items worth of &euro;50 (<a href="">order #2303</a>)</span>
-            <div class="clearfix"></div>
-        </li>
-        <!-- // Activity item END -->
-        <!-- Activity item -->
-        <li>
-            <span class="date">21/03</span>
-            <span class="glyphicons activity-icon shopping_cart"><i></i></span>
-            <span class="ellipsis"><a href="">Melisa Ragae</a> bought 10 items worth of &euro;50 (<a href="">order #2304</a>)</span>
-            <div class="clearfix"></div>
-        </li>
-        <!-- // Activity item END -->
-        <!-- Activity item -->
-        <li>
-            <span class="date">21/03</span>
-            <span class="glyphicons activity-icon shopping_cart"><i></i></span>
-            <span class="ellipsis"><a href="">Jane Doe</a> bought 10 items worth of &euro;50 (<a href="">order #2305</a>)</span>
-            <div class="clearfix"></div>
-        </li>
-        <!-- // Activity item END -->
-        <!-- Activity item -->
-        <li>
-            <span class="date">21/03</span>
-            <span class="glyphicons activity-icon shopping_cart"><i></i></span>
-            <span class="ellipsis"><a href="">Darius Jackson</a> bought 10 items worth of &euro;50 (<a href="">order #2306</a>)</span>
-            <div class="clearfix"></div>
-        </li>
-        <!-- // Activity item END -->
-        <!-- Activity item -->
-        <li>
-            <span class="date">21/03</span>
-            <span class="glyphicons activity-icon shopping_cart"><i></i></span>
-            <span class="ellipsis"><a href="">Jane Doe</a> bought 10 items worth of &euro;50 (<a href="">order #2307</a>)</span>
-            <div class="clearfix"></div>
-        </li>
-        <!-- // Activity item END -->
-
-    </ul>
-    <a href="" class="btn btn-primary view-all">View all</a>
-</div>
-<!-- // Filter Orders Tab END -->
-
-<!-- Filter Messages Tab -->
-<div class="tab-pane" id="filterMessagesTab">
-    <ul class="list-timeline">
-
-        <!-- Activity item -->
-        <li>
-            <span class="date">21/03</span>
-            <span class="glyphicons activity-icon envelope"><i></i></span>
-            <span class="ellipsis"><a href="">Melisa Ragae</a> bought 10 items worth of &euro;50 (<a href="">order #2301</a>)</span>
-            <div class="clearfix"></div>
-        </li>
-        <!-- // Activity item END -->
-        <!-- Activity item -->
-        <li>
-            <span class="date">21/03</span>
-            <span class="glyphicons activity-icon envelope"><i></i></span>
-            <span class="ellipsis"><a href="">Melisa Ragae</a> bought 10 items worth of &euro;50 (<a href="">order #2302</a>)</span>
-            <div class="clearfix"></div>
-        </li>
-        <!-- // Activity item END -->
-        <!-- Activity item -->
-        <li>
-            <span class="date">21/03</span>
-            <span class="glyphicons activity-icon envelope"><i></i></span>
-            <span class="ellipsis"><a href="">Darius Jackson</a> bought 10 items worth of &euro;50 (<a href="">order #2303</a>)</span>
-            <div class="clearfix"></div>
-        </li>
-        <!-- // Activity item END -->
-        <!-- Activity item -->
-        <li>
-            <span class="date">21/03</span>
-            <span class="glyphicons activity-icon envelope"><i></i></span>
-            <span class="ellipsis"><a href="">Jane Doe</a> bought 10 items worth of &euro;50 (<a href="">order #2304</a>)</span>
-            <div class="clearfix"></div>
-        </li>
-        <!-- // Activity item END -->
-        <!-- Activity item -->
-        <li>
-            <span class="date">21/03</span>
-            <span class="glyphicons activity-icon envelope"><i></i></span>
-            <span class="ellipsis"><a href="">Jane Doe</a> bought 10 items worth of &euro;50 (<a href="">order #2305</a>)</span>
-            <div class="clearfix"></div>
-        </li>
-        <!-- // Activity item END -->
-        <!-- Activity item -->
-        <li>
-            <span class="date">21/03</span>
-            <span class="glyphicons activity-icon envelope"><i></i></span>
-            <span class="ellipsis"><a href="">Martin Glades</a> bought 10 items worth of &euro;50 (<a href="">order #2306</a>)</span>
-            <div class="clearfix"></div>
-        </li>
-        <!-- // Activity item END -->
-        <!-- Activity item -->
-        <li>
-            <span class="date">21/03</span>
-            <span class="glyphicons activity-icon envelope"><i></i></span>
-            <span class="ellipsis"><a href="">Melisa Ragae</a> bought 10 items worth of &euro;50 (<a href="">order #2307</a>)</span>
-            <div class="clearfix"></div>
-        </li>
-        <!-- // Activity item END -->
-
-    </ul>
-    <a href="" class="btn btn-primary view-all">View all</a>
-</div>
-<!-- // Filter Messages Tab END -->
-
-<!-- Filter Links Tab -->
-<div class="tab-pane" id="filterLinksTab">
-    <ul class="list-timeline">
-
-        <!-- Activity item -->
-        <li>
-            <span class="date">21/03</span>
-            <span class="glyphicons activity-icon link"><i></i></span>
-            <span class="ellipsis"><a href="">Martin Glades</a> bought 10 items worth of &euro;50 (<a href="">order #2301</a>)</span>
-            <div class="clearfix"></div>
-        </li>
-        <!-- // Activity item END -->
-        <!-- Activity item -->
-        <li>
-            <span class="date">21/03</span>
-            <span class="glyphicons activity-icon link"><i></i></span>
-            <span class="ellipsis"><a href="">Martin Glades</a> bought 10 items worth of &euro;50 (<a href="">order #2302</a>)</span>
-            <div class="clearfix"></div>
-        </li>
-        <!-- // Activity item END -->
-        <!-- Activity item -->
-        <li>
-            <span class="date">21/03</span>
-            <span class="glyphicons activity-icon link"><i></i></span>
-            <span class="ellipsis"><a href="">Jane Doe</a> bought 10 items worth of &euro;50 (<a href="">order #2303</a>)</span>
-            <div class="clearfix"></div>
-        </li>
-        <!-- // Activity item END -->
-        <!-- Activity item -->
-        <li>
-            <span class="date">21/03</span>
-            <span class="glyphicons activity-icon link"><i></i></span>
-            <span class="ellipsis"><a href="">John Doe</a> bought 10 items worth of &euro;50 (<a href="">order #2304</a>)</span>
-            <div class="clearfix"></div>
-        </li>
-        <!-- // Activity item END -->
-        <!-- Activity item -->
-        <li>
-            <span class="date">21/03</span>
-            <span class="glyphicons activity-icon link"><i></i></span>
-            <span class="ellipsis"><a href="">John Doe</a> bought 10 items worth of &euro;50 (<a href="">order #2305</a>)</span>
-            <div class="clearfix"></div>
-        </li>
-        <!-- // Activity item END -->
-        <!-- Activity item -->
-        <li>
-            <span class="date">21/03</span>
-            <span class="glyphicons activity-icon link"><i></i></span>
-            <span class="ellipsis"><a href="">Martin Glades</a> bought 10 items worth of &euro;50 (<a href="">order #2306</a>)</span>
-            <div class="clearfix"></div>
-        </li>
-        <!-- // Activity item END -->
-        <!-- Activity item -->
-        <li>
-            <span class="date">21/03</span>
-            <span class="glyphicons activity-icon link"><i></i></span>
-            <span class="ellipsis"><a href="">John Doe</a> bought 10 items worth of &euro;50 (<a href="">order #2307</a>)</span>
-            <div class="clearfix"></div>
-        </li>
-        <!-- // Activity item END -->
-
-    </ul>
-    <a href="" class="btn btn-primary view-all">View all</a>
-</div>
-<!-- // Filter Links Tab END -->
-
-<!-- Filter Photos Tab -->
-<div class="tab-pane" id="filterPhotosTab">
-    <ul class="list-timeline">
-
-        <!-- Activity item -->
-        <li>
-            <span class="date">21/03</span>
-            <span class="glyphicons activity-icon camera"><i></i></span>
-            <span class="ellipsis"><a href="">Melisa Ragae</a> bought 10 items worth of &euro;50 (<a href="">order #2301</a>)</span>
-            <div class="clearfix"></div>
-        </li>
-        <!-- // Activity item END -->
-        <!-- Activity item -->
-        <li>
-            <span class="date">21/03</span>
-            <span class="glyphicons activity-icon camera"><i></i></span>
-            <span class="ellipsis"><a href="">John Doe</a> bought 10 items worth of &euro;50 (<a href="">order #2302</a>)</span>
-            <div class="clearfix"></div>
-        </li>
-        <!-- // Activity item END -->
-        <!-- Activity item -->
-        <li>
-            <span class="date">21/03</span>
-            <span class="glyphicons activity-icon camera"><i></i></span>
-            <span class="ellipsis"><a href="">Jane Doe</a> bought 10 items worth of &euro;50 (<a href="">order #2303</a>)</span>
-            <div class="clearfix"></div>
-        </li>
-        <!-- // Activity item END -->
-        <!-- Activity item -->
-        <li>
-            <span class="date">21/03</span>
-            <span class="glyphicons activity-icon camera"><i></i></span>
-            <span class="ellipsis"><a href="">John Doe</a> bought 10 items worth of &euro;50 (<a href="">order #2304</a>)</span>
-            <div class="clearfix"></div>
-        </li>
-        <!-- // Activity item END -->
-        <!-- Activity item -->
-        <li>
-            <span class="date">21/03</span>
-            <span class="glyphicons activity-icon camera"><i></i></span>
-            <span class="ellipsis"><a href="">Martin Glades</a> bought 10 items worth of &euro;50 (<a href="">order #2305</a>)</span>
-            <div class="clearfix"></div>
-        </li>
-        <!-- // Activity item END -->
-        <!-- Activity item -->
-        <li>
-            <span class="date">21/03</span>
-            <span class="glyphicons activity-icon camera"><i></i></span>
-            <span class="ellipsis"><a href="">Darius Jackson</a> bought 10 items worth of &euro;50 (<a href="">order #2306</a>)</span>
-            <div class="clearfix"></div>
-        </li>
-        <!-- // Activity item END -->
-        <!-- Activity item -->
-        <li>
-            <span class="date">21/03</span>
-            <span class="glyphicons activity-icon camera"><i></i></span>
-            <span class="ellipsis"><a href="">Martin Glades</a> bought 10 items worth of &euro;50 (<a href="">order #2307</a>)</span>
-            <div class="clearfix"></div>
-        </li>
-        <!-- // Activity item END -->
-
-    </ul>
-    <a href="" class="btn btn-primary view-all">View all</a>
-</div>
-<!-- // Filter Photos Tab END -->
-
-</div>
-</div>
-</div>
-<!-- // Recent Activity END -->
-
-</div>
-<!-- // spacing END -->
-
-</div>
-<!-- // Column END -->
-
-<!-- Column -->
-<div class="span5">
-
-    <!-- Tabs -->
-    <div class="innerLR">
-        <div class="separator bottom"></div>
-        <div class="tabsbar tabsbar-2 margin-none">
-            <ul class="row-fluid row-merge">
-                <li class="span6 glyphicons chat active"><a href="#tab-chat" data-toggle="tab"><i></i> Live Chat</a></li>
-                <li class="span6 glyphicons envelope"><a href="#tab-messages" data-toggle="tab"><i></i> <span>Messages</span></a></li>
+                    </a>
+                </li><!-- end task item -->
+                <li><!-- Task item -->
+                    <a href="<?=base_url();?>public/admin/#">
+                        <h3>
+                            Some task I need to do
+                            <small class="pull-right">60%</small>
+                        </h3>
+                        <div class="progress xs">
+                            <div class="progress-bar progress-bar-red" style="width: 60%" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100">
+                                <span class="sr-only">60% Complete</span>
+                            </div>
+                        </div>
+                    </a>
+                </li><!-- end task item -->
+                <li><!-- Task item -->
+                    <a href="<?=base_url();?>public/admin/#">
+                        <h3>
+                            Make beautiful transitions
+                            <small class="pull-right">80%</small>
+                        </h3>
+                        <div class="progress xs">
+                            <div class="progress-bar progress-bar-yellow" style="width: 80%" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100">
+                                <span class="sr-only">80% Complete</span>
+                            </div>
+                        </div>
+                    </a>
+                </li><!-- end task item -->
             </ul>
-        </div>
-    </div>
-    <!-- // Tabs END -->
+        </li>
+        <li class="footer">
+            <a href="<?=base_url();?>public/admin/#">View all tasks</a>
+        </li>
+    </ul>
+</li>
+<!-- User Account: style can be found in dropdown.less -->
+<li class="dropdown user user-menu">
+    <a href="<?=base_url();?>public/admin/#" class="dropdown-toggle" data-toggle="dropdown">
+        <i class="glyphicon glyphicon-user"></i>
+        <span>Jane Doe <i class="caret"></i></span>
+    </a>
+    <ul class="dropdown-menu">
+        <!-- User image -->
+        <li class="user-header bg-light-blue">
+            <img src="<?=base_url();?>public/admin/img/avatar3.png" class="img-circle" alt="User Image" />
+            <p>
+                Jane Doe - Web Developer
+                <small>Member since Nov. 2012</small>
+            </p>
+        </li>
+        <!-- Menu Body -->
+        <li class="user-body">
+            <div class="col-xs-4 text-center">
+                <a href="<?=base_url();?>public/admin/#">Followers</a>
+            </div>
+            <div class="col-xs-4 text-center">
+                <a href="<?=base_url();?>public/admin/#">Sales</a>
+            </div>
+            <div class="col-xs-4 text-center">
+                <a href="<?=base_url();?>public/admin/#">Friends</a>
+            </div>
+        </li>
+        <!-- Menu Footer-->
+        <li class="user-footer">
+            <div class="pull-left">
+                <a href="<?=base_url();?>public/admin/#" class="btn btn-default btn-flat">Profile</a>
+            </div>
+            <div class="pull-right">
+                <a href="<?=base_url();?>public/admin/#" class="btn btn-default btn-flat">Sign out</a>
+            </div>
+        </li>
+    </ul>
+</li>
+</ul>
+</div>
+</nav>
+</header>
+<div class="wrapper row-offcanvas row-offcanvas-left">
+<!-- Left side column. contains the logo and sidebar -->
+<aside class="left-side sidebar-offcanvas">
+    <!-- sidebar: style can be found in sidebar.less -->
+    <section class="sidebar">
+        <!-- Sidebar user panel -->
+        <div class="user-panel">
+            <div class="pull-left image">
+                <img src="<?=base_url();?>public/admin/img/avatar3.png" class="img-circle" alt="User Image" />
+            </div>
+            <div class="pull-left info">
+                <p>Hello, Jane</p>
 
-    <!-- Tabs content -->
-    <div class="tab-content">
-
-        <!-- Chat -->
-        <div class="tab-pane innerAll active" id="tab-chat">
-            <div class="box-generic widget-chat">
-
-                <!-- Slim Scroll -->
-                <div class="slim-scroll chat-items" data-scroll-height="240px">
-
-                    <!-- Media item -->
-                    <div class="media">
-                        <div class="media-object pull-left thumb"><img src="<?=base_url();?>publics/admin/theme/images/mrawesome.jpg" alt=""></div>
-                        <div class="media-body">
-                            <blockquote>
-                                <small><a href="#" title="" class="strong">Martin</a> <cite>just now</cite></small>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin vitae accumsan mauris. Donec vitae nibh felis, facilisis bibendum sapien.</p>
-                            </blockquote>
-                        </div>
-                    </div>
-                    <!-- // Media item END -->
-
-                    <!-- Media item -->
-                    <div class="media">
-                        <div class="media-object pull-right thumb"><img src="<?=base_url();?>publics/admin/theme/images/mrawesome.jpg" alt=""></div>
-                        <div class="media-body right">
-                            <blockquote class="pull-right">
-                                <small><a href="#" title="" class="strong">John Doe</a><cite> 15 seconds ago</cite></small>
-                                <p>In ultricies ante eget tortor euismod vitae molestie eros hendrerit. Cras tristique, orci ac lacinia aliquet, velit risus laoreet lectus, eget sollicitudin metus orci non nulla.</p>
-                            </blockquote>
-                        </div>
-                    </div>
-                    <!-- // Media item END -->
-
-                    <!-- Media item -->
-                    <div class="media">
-                        <div class="media-object pull-left thumb"><img src="<?=base_url();?>publics/admin/theme/images/mrawesome.jpg" alt=""></div>
-                        <div class="media-body">
-                            <blockquote>
-                                <small><a href="#" title="" class="strong">Ricky</a> <cite>5 minutes ago</cite></small>
-                                <p>Pellentesque ac turpis turpis. Aliquam erat volutpat. Proin semper auctor mauris vel tempor. Ut eget turpis neque. Nam ultricies tortor eu odio ultricies euismod.</p>
-                            </blockquote>
-                        </div>
-                    </div>
-                    <!-- // Media item END -->
-
-                </div>
-                <!-- // Slim Scroll END -->
-
-                <div class="chat-controls">
-                    <div class="innerLR">
-                        <form class="margin-none">
-                            <div class="row-fluid">
-                                <div class="span10">
-                                    <input type="text" name="message" class="input-block-level margin-none" placeholder="Type your message .." />
-                                </div>
-                                <div class="span2">
-                                    <button type="submit" class="btn btn-block btn-inverse">Send</button>
-                                </div>
-                            </div>
-                        </form>
-                    </div>
-                </div>
-
+                <a href="<?=base_url();?>public/admin/#"><i class="fa fa-circle text-success"></i> Online</a>
             </div>
         </div>
-        <!-- // Chat END -->
-
-        <!-- Messages -->
-        <div class="widget widget-4 widget-messages margin-bottom-none tab-pane widget-scroll" data-scroll-height="272px" id="tab-messages">
-
-            <!-- Widget Heading -->
-            <div class="widget-head">
-                <h4 class="heading">Your Messages</h4>
-                <span class="pull-right"><a href="" class="btn btn-small btn-primary btn-icon glyphicons envelope"><i></i>View all</a></span>
-                <div class="clearfix"></div>
+        <!-- search form -->
+        <form action="#" method="get" class="sidebar-form">
+            <div class="input-group">
+                <input type="text" name="q" class="form-control" placeholder="Search..."/>
+                            <span class="input-group-btn">
+                                <button type='submit' name='seach' id='search-btn' class="btn btn-flat"><i class="fa fa-search"></i></button>
+                            </span>
             </div>
-            <!-- // Widget Heading END -->
+        </form>
+        <!-- /.search form -->
+        <!-- sidebar menu: : style can be found in sidebar.less -->
+        <ul class="sidebar-menu">
+            <li class="active">
+                <a href="<?=base_url();?>public/admin/index.html">
+                    <i class="fa fa-dashboard"></i> <span>Dashboard</span>
+                </a>
+            </li>
+            <li>
+                <a href="<?=base_url();?>public/admin/pages/widgets.html">
+                    <i class="fa fa-th"></i> <span>Widgets</span> <small class="badge pull-right bg-green">new</small>
+                </a>
+            </li>
+            <li class="treeview">
+                <a href="<?=base_url();?>public/admin/#">
+                    <i class="fa fa-bar-chart-o"></i>
+                    <span>Charts</span>
+                    <i class="fa fa-angle-left pull-right"></i>
+                </a>
+                <ul class="treeview-menu">
+                    <li><a href="<?=base_url();?>public/admin/pages/charts/morris.html"><i class="fa fa-angle-double-right"></i> Morris</a></li>
+                    <li><a href="<?=base_url();?>public/admin/pages/charts/flot.html"><i class="fa fa-angle-double-right"></i> Flot</a></li>
+                    <li><a href="<?=base_url();?>public/admin/pages/charts/inline.html"><i class="fa fa-angle-double-right"></i> Inline charts</a></li>
+                </ul>
+            </li>
+            <li class="treeview">
+                <a href="<?=base_url();?>public/admin/#">
+                    <i class="fa fa-laptop"></i>
+                    <span>UI Elements</span>
+                    <i class="fa fa-angle-left pull-right"></i>
+                </a>
+                <ul class="treeview-menu">
+                    <li><a href="<?=base_url();?>public/admin/pages/UI/general.html"><i class="fa fa-angle-double-right"></i> General</a></li>
+                    <li><a href="<?=base_url();?>public/admin/pages/UI/icons.html"><i class="fa fa-angle-double-right"></i> Icons</a></li>
+                    <li><a href="<?=base_url();?>public/admin/pages/UI/buttons.html"><i class="fa fa-angle-double-right"></i> Buttons</a></li>
+                    <li><a href="<?=base_url();?>public/admin/pages/UI/sliders.html"><i class="fa fa-angle-double-right"></i> Sliders</a></li>
+                    <li><a href="<?=base_url();?>public/admin/pages/UI/timeline.html"><i class="fa fa-angle-double-right"></i> Timeline</a></li>
+                </ul>
+            </li>
+            <li class="treeview">
+                <a href="<?=base_url();?>public/admin/#">
+                    <i class="fa fa-edit"></i> <span>Forms</span>
+                    <i class="fa fa-angle-left pull-right"></i>
+                </a>
+                <ul class="treeview-menu">
+                    <li><a href="<?=base_url();?>public/admin/pages/forms/general.html"><i class="fa fa-angle-double-right"></i> General Elements</a></li>
+                    <li><a href="<?=base_url();?>public/admin/pages/forms/advanced.html"><i class="fa fa-angle-double-right"></i> Advanced Elements</a></li>
+                    <li><a href="<?=base_url();?>public/admin/pages/forms/editors.html"><i class="fa fa-angle-double-right"></i> Editors</a></li>
+                </ul>
+            </li>
+            <li class="treeview">
+                <a href="<?=base_url();?>public/admin/#">
+                    <i class="fa fa-table"></i> <span>Tables</span>
+                    <i class="fa fa-angle-left pull-right"></i>
+                </a>
+                <ul class="treeview-menu">
+                    <li><a href="<?=base_url();?>public/admin/pages/tables/simple.html"><i class="fa fa-angle-double-right"></i> Simple tables</a></li>
+                    <li><a href="<?=base_url();?>public/admin/pages/tables/data.html"><i class="fa fa-angle-double-right"></i> Data tables</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="<?=base_url();?>public/admin/pages/calendar.html">
+                    <i class="fa fa-calendar"></i> <span>Calendar</span>
+                    <small class="badge pull-right bg-red">3</small>
+                </a>
+            </li>
+            <li>
+                <a href="<?=base_url();?>public/admin/pages/mailbox.html">
+                    <i class="fa fa-envelope"></i> <span>Mailbox</span>
+                    <small class="badge pull-right bg-yellow">12</small>
+                </a>
+            </li>
+            <li class="treeview">
+                <a href="<?=base_url();?>public/admin/#">
+                    <i class="fa fa-folder"></i> <span>Examples</span>
+                    <i class="fa fa-angle-left pull-right"></i>
+                </a>
+                <ul class="treeview-menu">
+                    <li><a href="<?=base_url();?>public/admin/pages/examples/invoice.html"><i class="fa fa-angle-double-right"></i> Invoice</a></li>
+                    <li><a href="<?=base_url();?>public/admin/pages/examples/login.html"><i class="fa fa-angle-double-right"></i> Login</a></li>
+                    <li><a href="<?=base_url();?>public/admin/pages/examples/register.html"><i class="fa fa-angle-double-right"></i> Register</a></li>
+                    <li><a href="<?=base_url();?>public/admin/pages/examples/lockscreen.html"><i class="fa fa-angle-double-right"></i> Lockscreen</a></li>
+                    <li><a href="<?=base_url();?>public/admin/pages/examples/404.html"><i class="fa fa-angle-double-right"></i> 404 Error</a></li>
+                    <li><a href="<?=base_url();?>public/admin/pages/examples/500.html"><i class="fa fa-angle-double-right"></i> 500 Error</a></li>
+                    <li><a href="<?=base_url();?>public/admin/pages/examples/blank.html"><i class="fa fa-angle-double-right"></i> Blank Page</a></li>
+                </ul>
+            </li>
+        </ul>
+    </section>
+    <!-- /.sidebar -->
+</aside>
 
-            <div class="widget-body">
-                <div>
-                    <ul>
-                        <!-- Message -->
-                        <li>
-                            <span class="meta glyphicons user single"><i></i> Adrian <span>1 hour ago</span></span>
-                            <p>Are you available for freelance?</p>
-                            <div>
-                                <a href="" class="btn btn-mini btn-inverse">reply</a>
-                                <a href="" class="glyphicons single bin pull-right" style="margin: 0;"><i></i></a>
-                                <div class="clearfix"></div>
-                            </div>
-                        </li>
-                        <!-- // Message END -->
+<!-- Right side column. Contains the navbar and content of the page -->
+<aside class="right-side">
+<!-- Content Header (Page header) -->
+<section class="content-header">
+    <h1>
+        Dashboard
+        <small>Control panel</small>
+    </h1>
+    <ol class="breadcrumb">
+        <li><a href="<?=base_url();?>public/admin/#"><i class="fa fa-dashboard"></i> Home</a></li>
+        <li class="active">Dashboard</li>
+    </ol>
+</section>
 
-                        <!-- Message -->
-                        <li>
-                            <span class="meta glyphicons user single"><i></i> MosaicPro <span>10 seconds ago</span></span>
-                            <p>Your question has been answered.</p>
-                            <div>
-                                <a href="" class="btn btn-mini btn-inverse">reply</a>
-                                <a href="" class="glyphicons single bin pull-right" style="margin: 0;"><i></i></a>
-                                <div class="clearfix"></div>
-                            </div>
-                            <div class="ribbon-wrapper small"><div class="ribbon primary">Staff</div></div>
-                        </li>
-                        <!-- // Message END -->
+<!-- Main content -->
+<section class="content">
 
-                        <!-- Message -->
-                        <li>
-                            <span class="meta glyphicons user single"><i></i> Adrian <span>1 hour ago</span></span>
-                            <p>Are you available for freelance?</p>
-                            <div>
-                                <a href="" class="btn btn-mini btn-inverse">reply</a>
-                                <a href="" class="glyphicons single bin pull-right" style="margin: 0;"><i></i></a>
-                                <div class="clearfix"></div>
-                            </div>
-                        </li>
-                        <!-- // Message END -->
-                        <!-- Message -->
-                        <li>
-                            <span class="meta glyphicons user single"><i></i> Adrian <span>1 hour ago</span></span>
-                            <p>Are you available for freelance?</p>
-                            <div>
-                                <a href="" class="btn btn-mini btn-inverse">reply</a>
-                                <a href="" class="glyphicons single bin pull-right" style="margin: 0;"><i></i></a>
-                                <div class="clearfix"></div>
-                            </div>
-                        </li>
-                        <!-- // Message END -->
-                        <!-- Message -->
-                        <li>
-                            <span class="meta glyphicons user single"><i></i> Adrian <span>1 hour ago</span></span>
-                            <p>Are you available for freelance?</p>
-                            <div>
-                                <a href="" class="btn btn-mini btn-inverse">reply</a>
-                                <a href="" class="glyphicons single bin pull-right" style="margin: 0;"><i></i></a>
-                                <div class="clearfix"></div>
-                            </div>
-                        </li>
-                        <!-- // Message END -->
-                        <!-- Message -->
-                        <li>
-                            <span class="meta glyphicons user single"><i></i> Adrian <span>1 hour ago</span></span>
-                            <p>Are you available for freelance?</p>
-                            <div>
-                                <a href="" class="btn btn-mini btn-inverse">reply</a>
-                                <a href="" class="glyphicons single bin pull-right" style="margin: 0;"><i></i></a>
-                                <div class="clearfix"></div>
-                            </div>
-                        </li>
-                        <!-- // Message END -->
-                        <!-- Message -->
-                        <li>
-                            <span class="meta glyphicons user single"><i></i> Adrian <span>1 hour ago</span></span>
-                            <p>Are you available for freelance?</p>
-                            <div>
-                                <a href="" class="btn btn-mini btn-inverse">reply</a>
-                                <a href="" class="glyphicons single bin pull-right" style="margin: 0;"><i></i></a>
-                                <div class="clearfix"></div>
-                            </div>
-                        </li>
-                        <!-- // Message END -->
+<!-- Small boxes (Stat box) -->
+<div class="row">
+    <div class="col-lg-3 col-xs-6">
+        <!-- small box -->
+        <div class="small-box bg-aqua">
+            <div class="inner">
+                <h3>
+                    150
+                </h3>
+                <p>
+                    New Orders
+                </p>
+            </div>
+            <div class="icon">
+                <i class="ion ion-bag"></i>
+            </div>
+            <a href="<?=base_url();?>public/admin/#" class="small-box-footer">
+                More info <i class="fa fa-arrow-circle-right"></i>
+            </a>
+        </div>
+    </div><!-- ./col -->
+    <div class="col-lg-3 col-xs-6">
+        <!-- small box -->
+        <div class="small-box bg-green">
+            <div class="inner">
+                <h3>
+                    53<sup style="font-size: 20px">%</sup>
+                </h3>
+                <p>
+                    Bounce Rate
+                </p>
+            </div>
+            <div class="icon">
+                <i class="ion ion-stats-bars"></i>
+            </div>
+            <a href="<?=base_url();?>public/admin/#" class="small-box-footer">
+                More info <i class="fa fa-arrow-circle-right"></i>
+            </a>
+        </div>
+    </div><!-- ./col -->
+    <div class="col-lg-3 col-xs-6">
+        <!-- small box -->
+        <div class="small-box bg-yellow">
+            <div class="inner">
+                <h3>
+                    44
+                </h3>
+                <p>
+                    User Registrations
+                </p>
+            </div>
+            <div class="icon">
+                <i class="ion ion-person-add"></i>
+            </div>
+            <a href="<?=base_url();?>public/admin/#" class="small-box-footer">
+                More info <i class="fa fa-arrow-circle-right"></i>
+            </a>
+        </div>
+    </div><!-- ./col -->
+    <div class="col-lg-3 col-xs-6">
+        <!-- small box -->
+        <div class="small-box bg-red">
+            <div class="inner">
+                <h3>
+                    65
+                </h3>
+                <p>
+                    Unique Visitors
+                </p>
+            </div>
+            <div class="icon">
+                <i class="ion ion-pie-graph"></i>
+            </div>
+            <a href="<?=base_url();?>public/admin/#" class="small-box-footer">
+                More info <i class="fa fa-arrow-circle-right"></i>
+            </a>
+        </div>
+    </div><!-- ./col -->
+</div><!-- /.row -->
 
+<!-- top row -->
+<div class="row">
+    <div class="col-xs-12 connectedSortable">
+
+    </div><!-- /.col -->
+</div>
+<!-- /.row -->
+
+<!-- Main row -->
+<div class="row">
+<!-- Left col -->
+<section class="col-lg-6 connectedSortable">
+    <!-- Box (with bar chart) -->
+    <div class="box box-danger" id="loading-example">
+        <div class="box-header">
+            <!-- tools box -->
+            <div class="pull-right box-tools">
+                <button class="btn btn-danger btn-sm refresh-btn" data-toggle="tooltip" title="Reload"><i class="fa fa-refresh"></i></button>
+                <button class="btn btn-danger btn-sm" data-widget='collapse' data-toggle="tooltip" title="Collapse"><i class="fa fa-minus"></i></button>
+                <button class="btn btn-danger btn-sm" data-widget='remove' data-toggle="tooltip" title="Remove"><i class="fa fa-times"></i></button>
+            </div><!-- /. tools -->
+            <i class="fa fa-cloud"></i>
+
+            <h3 class="box-title">Server Load</h3>
+        </div><!-- /.box-header -->
+        <div class="box-body no-padding">
+            <div class="row">
+                <div class="col-sm-7">
+                    <!-- bar chart -->
+                    <div class="chart" id="bar-chart" style="height: 250px;"></div>
+                </div>
+                <div class="col-sm-5">
+                    <div class="pad">
+                        <!-- Progress bars -->
+                        <div class="clearfix">
+                            <span class="pull-left">Bandwidth</span>
+                            <small class="pull-right">10/200 GB</small>
+                        </div>
+                        <div class="progress xs">
+                            <div class="progress-bar progress-bar-green" style="width: 70%;"></div>
+                        </div>
+
+                        <div class="clearfix">
+                            <span class="pull-left">Transfered</span>
+                            <small class="pull-right">10 GB</small>
+                        </div>
+                        <div class="progress xs">
+                            <div class="progress-bar progress-bar-red" style="width: 70%;"></div>
+                        </div>
+
+                        <div class="clearfix">
+                            <span class="pull-left">Activity</span>
+                            <small class="pull-right">73%</small>
+                        </div>
+                        <div class="progress xs">
+                            <div class="progress-bar progress-bar-light-blue" style="width: 70%;"></div>
+                        </div>
+
+                        <div class="clearfix">
+                            <span class="pull-left">FTP</span>
+                            <small class="pull-right">30 GB</small>
+                        </div>
+                        <div class="progress xs">
+                            <div class="progress-bar progress-bar-aqua" style="width: 70%;"></div>
+                        </div>
+                        <!-- Buttons -->
+                        <p>
+                            <button class="btn btn-default btn-sm"><i class="fa fa-cloud-download"></i> Generate PDF</button>
+                        </p>
+                    </div><!-- /.pad -->
+                </div><!-- /.col -->
+            </div><!-- /.row - inside box -->
+        </div><!-- /.box-body -->
+        <div class="box-footer">
+            <div class="row">
+                <div class="col-xs-4 text-center" style="border-right: 1px solid #f4f4f4">
+                    <input type="text" class="knob" data-readonly="true" value="80" data-width="60" data-height="60" data-fgColor="#f56954"/>
+                    <div class="knob-label">CPU</div>
+                </div><!-- ./col -->
+                <div class="col-xs-4 text-center" style="border-right: 1px solid #f4f4f4">
+                    <input type="text" class="knob" data-readonly="true" value="50" data-width="60" data-height="60" data-fgColor="#00a65a"/>
+                    <div class="knob-label">Disk</div>
+                </div><!-- ./col -->
+                <div class="col-xs-4 text-center">
+                    <input type="text" class="knob" data-readonly="true" value="30" data-width="60" data-height="60" data-fgColor="#3c8dbc"/>
+                    <div class="knob-label">RAM</div>
+                </div><!-- ./col -->
+            </div><!-- /.row -->
+        </div><!-- /.box-footer -->
+    </div><!-- /.box -->
+
+    <!-- Custom tabs (Charts with tabs)-->
+    <div class="nav-tabs-custom">
+        <!-- Tabs within a box -->
+        <ul class="nav nav-tabs pull-right">
+            <li class="active"><a href="<?=base_url();?>public/admin/#revenue-chart" data-toggle="tab">Area</a></li>
+            <li><a href="<?=base_url();?>public/admin/#sales-chart" data-toggle="tab">Donut</a></li>
+            <li class="pull-left header"><i class="fa fa-inbox"></i> Sales</li>
+        </ul>
+        <div class="tab-content no-padding">
+            <!-- Morris chart - Sales -->
+            <div class="chart tab-pane active" id="revenue-chart" style="position: relative; height: 300px;"></div>
+            <div class="chart tab-pane" id="sales-chart" style="position: relative; height: 300px;"></div>
+        </div>
+    </div><!-- /.nav-tabs-custom -->
+
+    <!-- Calendar -->
+    <div class="box box-warning">
+        <div class="box-header">
+            <i class="fa fa-calendar"></i>
+            <div class="box-title">Calendar</div>
+
+            <!-- tools box -->
+            <div class="pull-right box-tools">
+                <!-- button with a dropdown -->
+                <div class="btn-group">
+                    <button class="btn btn-warning btn-sm dropdown-toggle" data-toggle="dropdown"><i class="fa fa-bars"></i></button>
+                    <ul class="dropdown-menu pull-right" role="menu">
+                        <li><a href="<?=base_url();?>public/admin/#">Add new event</a></li>
+                        <li><a href="<?=base_url();?>public/admin/#">Clear events</a></li>
+                        <li class="divider"></li>
+                        <li><a href="<?=base_url();?>public/admin/#">View calendar</a></li>
                     </ul>
                 </div>
-            </div>
+            </div><!-- /. tools -->
+        </div><!-- /.box-header -->
+        <div class="box-body no-padding">
+            <!--The calendar -->
+            <div id="calendar"></div>
+        </div><!-- /.box-body -->
+    </div><!-- /.box -->
+
+    <!-- quick email widget -->
+    <div class="box box-info">
+        <div class="box-header">
+            <i class="fa fa-envelope"></i>
+            <h3 class="box-title">Quick Email</h3>
+            <!-- tools box -->
+            <div class="pull-right box-tools">
+                <button class="btn btn-info btn-sm" data-widget="remove" data-toggle="tooltip" title="Remove"><i class="fa fa-times"></i></button>
+            </div><!-- /. tools -->
         </div>
-        <!-- // Messages END -->
-
-    </div>
-    <!-- // Tabs content END -->
-
-</div>
-<!-- // Column END -->
-
-</div>
-<!-- // Row END -->
-
-<div class="row-fluid row-merge">
-    <div class="span6">
-
-        <!-- Inner -->
-        <div class="innerAll">
-
-            <!-- Row -->
-            <div class="row-fluid">
-                <div class="span4">
-
-                    <!-- Stats Widget -->
-                    <a href="" class="widget-stats widget-stats-2">
-                        <span class="sparkline"></span>
-                        <span class="txt"><span class="count">2,566</span> Sales</span>
-                        <div class="clearfix"></div>
-                    </a>
-                    <!-- // Stats Widget END -->
-
+        <div class="box-body">
+            <form action="#" method="post">
+                <div class="form-group">
+                    <input type="email" class="form-control" name="emailto" placeholder="Email to:"/>
                 </div>
-                <div class="span4">
-
-                    <!-- Stats Widget -->
-                    <a href="" class="widget-stats widget-stats-2 widget-stats-3">
-                        <span class="sparkline success"></span>
-                        <span class="txt"><span class="count">12,566</span> Photos</span>
-                        <div class="clearfix"></div>
-                    </a>
-                    <!-- // Stats Widget END -->
-
+                <div class="form-group">
+                    <input type="text" class="form-control" name="subject" placeholder="Subject"/>
                 </div>
-                <div class="span4">
-
-                    <!-- Stats Widget -->
-                    <a href="" class="widget-stats widget-stats-2 widget-stats-3">
-                        <span class="sparkline danger"></span>
-                        <span class="txt"><span class="count">12,566</span> Photos</span>
-                        <div class="clearfix"></div>
-                    </a>
-                    <!-- // Stats Widget END -->
-
-                </div>
-            </div>
-            <!-- // Row END -->
-
-        </div>
-        <!-- // Inner END -->
-
-    </div>
-    <div class="span6">
-
-        <!-- Inner -->
-        <div class="innerAll">
-
-            <!-- Row -->
-            <div class="row-fluid">
-                <div class="span3">
-
-                    <!-- Stats Widget -->
-                    <a href="" class="widget-stats widget-stats-2 widget-stats-easy-pie">
-                        <div data-percent="75" class="easy-pie"><span class="value">75</span>%</div>
-                        <span class="txt"><span class="count">2,566</span> Sales</span>
-                        <div class="clearfix"></div>
-                    </a>
-                    <!-- // Stats Widget END -->
-
-                </div>
-                <div class="span3">
-
-                    <!-- Stats Widget -->
-                    <a href="" class="widget-stats widget-stats-2 widget-stats-easy-pie txt-single">
-                        <div data-percent="85" class="easy-pie danger"><span class="value">85</span>%</div>
-                        <span class="txt">Server workload</span>
-                        <div class="clearfix"></div>
-                    </a>
-                    <!-- // Stats Widget END -->
-
-                </div>
-                <div class="span3">
-
-                    <!-- Stats Widget -->
-                    <a href="" class="widget-stats widget-stats-2 widget-stats-easy-pie txt-single">
-                        <div data-percent="90" class="easy-pie success"><span class="value">90</span>%</div>
-                        <span class="txt">Completed tasks</span>
-                        <div class="clearfix"></div>
-                    </a>
-                    <!-- // Stats Widget END -->
-
-                </div>
-                <div class="span3">
-
-                    <!-- Stats Widget -->
-                    <a href="" class="widget-stats widget-stats-2 widget-stats-easy-pie">
-                        <div data-percent="23" class="easy-pie inverse"><span class="value">23</span>%</div>
-                        <span class="txt"><span class="count">1,244</span> Emails</span>
-                        <div class="clearfix"></div>
-                    </a>
-                    <!-- // Stats Widget END -->
-
-                </div>
-            </div>
-            <!-- // Row END -->
-
-        </div>
-        <!-- // Inner END -->
-
-    </div>
-</div>
-<div class="row-fluid row-merge">
-
-    <!-- 6/12 Column -->
-    <div class="span6">
-
-        <!-- Upcoming Events Widget -->
-        <div class="widget widget-4 margin-bottom-none">
-
-            <!-- Widget Heading -->
-            <div class="widget-head">
-                <h4 class="heading">Upcoming Events</h4>
-                <span class="pull-right"><a href="calendar.html?lang=en" class="btn btn-small btn-default">Full Calendar</a></span>
-                <div class="clearfix"></div>
-            </div>
-            <!-- // Widget Heading END -->
-
-            <div class="widget-body">
-
-                <!-- Datepicker Inline -->
-                <div class="datepicker-inline" id="datepicker-inline"></div>
-
-                <!-- Buttons -->
-                <div class="row-fluid">
-                    <div class="span6">
-                        <a href="calendar.html?lang=en" class="btn btn-block btn-small btn-inverse btn-icon glyphicons circle_plus"><i></i> Add event</a>
-                    </div>
-                    <div class="span6">
-                        <a href="calendar.html?lang=en" class="btn btn-block btn-small btn-primary btn-icon glyphicons right_arrow"><i></i> Next</a>
-                    </div>
-                </div>
-                <!-- // Buttons END -->
-
-            </div>
-        </div>
-        <!-- // Upcoming Events Widget END -->
-
-    </div>
-    <!-- // 6/12 Column END -->
-
-    <!-- 6/12 Column -->
-    <div class="span6">
-
-        <!-- Stats Widgets -->
-        <div class="widget widget-4 margin-bottom-none">
-            <div class="widget-head"><h4 class="heading">Stats widgets <span>with over 400+ icons</span></h4></div>
-            <div class="widget-body">
-
-                <!-- Row -->
-                <div class="row-fluid">
-                    <div class="span3">
-
-                        <!-- Stats Widget -->
-                        <a href="" class="widget-stats small">
-                            <span class="glyphicons shopping_cart"><i></i></span>
-                            <span class="count label label-primary">20</span>
-                        </a>
-                        <!-- // Stats Widget END -->
-
-                    </div>
-                    <div class="span3">
-
-                        <!-- Stats Widget -->
-                        <a href="" class="widget-stats small gray">
-                            <span class="glyphicons fishes"><i></i></span>
-                            <span class="count label label-primary">250</span>
-                        </a>
-                        <!-- // Stats Widget END -->
-
-                    </div>
-                    <div class="span3">
-
-                        <!-- Stats Widget -->
-                        <a href="" class="widget-stats small dark">
-                            <span class="glyphicons umbrella"><i></i></span>
-                            <span class="count label label-primary">238</span>
-                        </a>
-                        <!-- // Stats Widget END -->
-
-                    </div>
-                    <div class="span3">
-
-                        <!-- Stats Widget -->
-                        <a href="" class="widget-stats small primary">
-                            <span class="glyphicons user_add"><i></i></span>
-                            <span class="count label label-primary">134</span>
-                        </a>
-                        <!-- // Stats Widget END -->
-
-                    </div>
-                </div>
-                <!-- // Row END -->
-
-                <div class="separator bottom"></div>
-
-                <!-- Row -->
-                <div class="row-fluid">
-                    <div class="span3">
-
-                        <!-- Stats Widget -->
-                        <a href="" class="widget-stats small">
-                            <span class="glyphicons coins"><i></i></span>
-                            <span class="count label label-primary">20</span>
-                        </a>
-                        <!-- // Stats Widget END -->
-
-                    </div>
-                    <div class="span3">
-
-                        <!-- Stats Widget -->
-                        <a href="" class="widget-stats small">
-                            <span class="glyphicons note"><i></i></span>
-                            <span class="count label label-primary">250</span>
-                        </a>
-                        <!-- // Stats Widget END -->
-
-                    </div>
-                    <div class="span3">
-
-                        <!-- Stats Widget -->
-                        <a href="" class="widget-stats small">
-                            <span class="glyphicons camera"><i></i></span>
-                            <span class="count label label-primary">238</span>
-                        </a>
-                        <!-- // Stats Widget END -->
-
-                    </div>
-                    <div class="span3">
-
-                        <!-- Stats Widget -->
-                        <a href="" class="widget-stats small">
-                            <span class="glyphicons notes"><i></i></span>
-                            <span class="count label label-primary">134</span>
-                        </a>
-                        <!-- // Stats Widget END -->
-
-                    </div>
-                </div>
-                <!-- // Row END -->
-
-                <div class="separator bottom"></div>
-
-                <!-- Row -->
-                <div class="row-fluid">
-                    <div class="span3">
-
-                        <!-- Stats Widget -->
-                        <a href="" class="widget-stats small margin-bottom-none">
-                            <span class="glyphicons alarm"><i></i></span>
-                            <span class="count label label-primary">20</span>
-                        </a>
-                        <!-- // Stats Widget END -->
-
-                    </div>
-                    <div class="span3">
-
-                        <!-- Stats Widget -->
-                        <a href="" class="widget-stats small margin-bottom-none">
-                            <span class="glyphicons tags"><i></i></span>
-                            <span class="count label label-primary">250</span>
-                        </a>
-                        <!-- // Stats Widget END -->
-
-                    </div>
-                    <div class="span3">
-
-                        <!-- Stats Widget -->
-                        <a href="" class="widget-stats small margin-bottom-none">
-                            <span class="glyphicons gift"><i></i></span>
-                            <span class="count label label-primary">238</span>
-                        </a>
-                        <!-- // Stats Widget END -->
-
-                    </div>
-                    <div class="span3">
-
-                        <!-- Stats Widget -->
-                        <a href="" class="widget-stats small margin-bottom-none">
-                            <span class="glyphicons car"><i></i></span>
-                            <span class="count label label-primary">134</span>
-                        </a>
-                        <!-- // Stats Widget END -->
-
-                    </div>
-                </div>
-                <!-- // Row END -->
-
-            </div>
-        </div>
-        <!-- // Stats Widgets END -->
-
-    </div>
-    <!-- // 6/12 Column END -->
-
-</div>
-
-<!-- Button Widget -->
-<div class="menubar">
-    <ul>
-        <li>Button widget:</li>
-        <li><a href="">Button 1</a></li>
-        <li class="divider"></li>
-        <li><a href="">Button 2</a></li>
-        <li class="divider"></li>
-        <li><a href="">Export</a></li>
-    </ul>
-</div>
-<div class="separator"></div>
-<!-- // Button Widget END -->
-
-<div class="innerLR">
-
-<!-- Stats Widgets -->
-<div class="row-fluid">
-    <div class="span2">
-
-        <!-- Stats Widget -->
-        <a href="" class="widget-stats margin-bottom-none">
-            <span class="glyphicons shopping_cart"><i></i></span>
-            <span class="txt">Sales</span>
-            <div class="clearfix"></div>
-            <span class="count label label-important">20</span>
-        </a>
-        <!-- // Stats Widget END -->
-
-    </div>
-    <div class="span2">
-
-        <!-- Stats Widget -->
-        <a href="" class="widget-stats margin-bottom-none">
-            <span class="glyphicons shield"><i></i></span>
-            <span class="txt">Alerts</span>
-            <div class="clearfix"></div>
-            <span class="count label">25</span>
-        </a>
-        <!-- // Stats Widget END -->
-
-    </div>
-    <div class="span2">
-
-        <!-- Stats Widget -->
-        <a href="" class="widget-stats margin-bottom-none">
-            <span class="glyphicons user_add"><i></i></span>
-            <span class="txt">Clients</span>
-            <div class="clearfix"></div>
-            <span class="count label label-warning">33</span>
-        </a>
-        <!-- // Stats Widget END -->
-
-    </div>
-    <div class="span2">
-
-        <!-- Stats Widget -->
-        <a href="" class="widget-stats margin-bottom-none">
-            <span class="glyphicons envelope"><i></i></span>
-            <span class="txt">Messages</span>
-            <div class="clearfix"></div>
-            <span class="count label label-primary">265</span>
-        </a>
-        <!-- // Stats Widget END -->
-
-    </div>
-    <div class="span2">
-
-        <!-- Stats Widget -->
-        <a href="" class="widget-stats margin-bottom-none">
-            <span class="glyphicons fishes"><i></i></span>
-            <span class="txt">Fishes</span>
-            <div class="clearfix"></div>
-            <span class="count label label-important">13</span>
-        </a>
-        <!-- // Stats Widget END -->
-
-    </div>
-    <div class="span2">
-
-        <!-- Stats Widget -->
-        <a href="" class="widget-stats margin-bottom-none">
-            <span class="glyphicons coins"><i></i></span>
-            <span class="txt">Earnings</span>
-            <div class="clearfix"></div>
-            <span class="count label label-success">&euro;292,039.02</span>
-        </a>
-        <!-- // Stats Widget END -->
-
-    </div>
-</div>
-<div class="separator bottom"></div>
-<!-- // Stats Widgets END -->
-
-<div class="row-fluid">
-    <div class="span6">
-
-        <!-- Activity/List Widget -->
-        <div class="widget" data-toggle="collapse-widget">
-
-            <!-- Widget Heading -->
-            <div class="widget-head">
-                <h4 class="heading glyphicons history"><i></i>Activity</h4>
-                <a href="" class="details pull-right">view all</a>
-            </div>
-            <!-- // Widget Heading END -->
-
-            <div class="widget-body list">
-                <ul>
-
-                    <!-- List item -->
-                    <li>
-                        <span>Sales today</span>
-                        <span class="count">&euro;5,900</span>
-                    </li>
-                    <!-- // List item END -->
-
-                    <!-- List item -->
-                    <li>
-                        <span>Some other stats</span>
-                        <span class="count">36,900</span>
-                    </li>
-                    <!-- // List item END -->
-
-                </ul>
-            </div>
-        </div>
-        <!-- // Activity/List Widget END -->
-
-        <!-- Latest Orders/List Widget -->
-        <div class="widget margin-bottom-none" data-toggle="collapse-widget">
-
-            <!-- Widget Heading -->
-            <div class="widget-head">
-                <h4 class="heading">Last orders</h4>
-                <a href="" class="details pull-right">view all</a>
-            </div>
-            <!-- // Widget Heading -->
-
-            <div class="widget-body list products">
-                <ul>
-
-                    <!-- List item -->
-                    <li>
-                        <span class="img">photo</span>
-                        <span class="title">10 items<br/><strong>&euro;5,900.00</strong></span>
-                        <span class="count"></span>
-                    </li>
-                    <!-- // List item END -->
-
-                    <!-- List item -->
-                    <li>
-                        <span class="img">photo</span>
-                        <span class="title">Product name<br/><strong>&euro;2,900</strong></span>
-                        <span class="count"></span>
-                    </li>
-                    <!-- // List item END -->
-
-                </ul>
-            </div>
-        </div>
-        <!-- // Latest Orders/List Widget END -->
-
-    </div>
-    <div class="span6">
-
-        <!-- Comments Widget -->
-        <div class="widget widget-scroll margin-bottom-none" data-scroll-height="223px" data-toggle="collapse-widget">
-
-            <!-- Widget Heading -->
-            <div class="widget-head">
-                <h4 class="heading glyphicons conversation"><i></i>Comments</h4>
-            </div>
-            <!-- // Widget Heading END -->
-
-            <div class="widget-body">
                 <div>
-
-                    <!-- Media item -->
-                    <div class="media">
-                        <img class="media-object pull-left thumb" src="<?=base_url();?>publics/admin/theme/images/mrawesome.jpg" alt="">
-                        <div class="media-body">
-                            <blockquote>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin vitae accumsan mauris. Donec vitae nibh felis, facilisis bibendum sapien. Duis a odio id erat scelerisque fermentum in ut leo. Suspendisse potenti. Nunc semper cursus dui luctus porttitor. Donec facilisis semper magna sit amet ullamcorper. Cras rutrum magna eget risus vulputate congue. Sed sem libero, dignissim sit amet viverra vitae, suscipit sit amet elit. Integer tincidunt risus in metus rhoncus molestie.</p>
-                                <small><a href="#" title="">John Doe</a><cite> | client @ Famous Company</cite></small>
-                            </blockquote>
-                        </div>
-                    </div>
-                    <!-- // Media item END -->
-
-                    <!-- Media item -->
-                    <div class="media">
-                        <img class="media-object pull-right thumb" src="<?=base_url();?>publics/admin/theme/images/mrawesome.jpg" alt="">
-                        <div class="media-body">
-                            <blockquote class="pull-right">
-                                <p>In ultricies ante eget tortor euismod vitae molestie eros hendrerit. Cras tristique, orci ac lacinia aliquet, velit risus laoreet lectus, eget sollicitudin metus orci non nulla. Pellentesque ac turpis turpis. Aliquam erat volutpat. Proin semper auctor mauris vel tempor. Ut eget turpis neque. Nam ultricies tortor eu odio ultricies euismod. Nulla rhoncus iaculis felis vulputate euismod. Maecenas sapien arcu, gravida eu tincidunt vel, ultricies ullamcorper neque.</p>
-                                <small><a href="#" title="">John Doe</a><cite> | client @ Famous Company</cite></small>
-                            </blockquote>
-                        </div>
-                    </div>
-                    <!-- // Media item END -->
-
+                    <textarea class="textarea" placeholder="Message" style="width: 100%; height: 125px; font-size: 14px; line-height: 18px; border: 1px solid #dddddd; padding: 10px;"></textarea>
                 </div>
-            </div>
+            </form>
         </div>
-        <!-- // Comments Widget END -->
+        <div class="box-footer clearfix">
+            <button class="pull-right btn btn-default" id="sendEmail">Send <i class="fa fa-arrow-circle-right"></i></button>
+        </div>
+    </div>
 
+</section><!-- /.Left col -->
+<!-- right col (We are only adding the ID to make the widgets sortable)-->
+<section class="col-lg-6 connectedSortable">
+<!-- Map box -->
+<div class="box box-primary">
+    <div class="box-header">
+        <!-- tools box -->
+        <div class="pull-right box-tools">
+            <button class="btn btn-primary btn-sm daterange pull-right" data-toggle="tooltip" title="Date range"><i class="fa fa-calendar"></i></button>
+            <button class="btn btn-primary btn-sm pull-right" data-widget='collapse' data-toggle="tooltip" title="Collapse" style="margin-right: 5px;"><i class="fa fa-minus"></i></button>
+        </div><!-- /. tools -->
+
+        <i class="fa fa-map-marker"></i>
+        <h3 class="box-title">
+            Visitors
+        </h3>
+    </div>
+    <div class="box-body no-padding">
+        <div id="world-map" style="height: 300px;"></div>
+        <div class="table-responsive">
+            <!-- .table - Uses sparkline charts-->
+            <table class="table table-striped">
+                <tr>
+                    <th>Country</th>
+                    <th>Visitors</th>
+                    <th>Online</th>
+                    <th>Page Views</th>
+                </tr>
+                <tr>
+                    <td><a href="<?=base_url();?>public/admin/#">USA</a></td>
+                    <td><div id="sparkline-1"></div></td>
+                    <td>209</td>
+                    <td>239</td>
+                </tr>
+                <tr>
+                    <td><a href="<?=base_url();?>public/admin/#">India</a></td>
+                    <td><div id="sparkline-2"></div></td>
+                    <td>131</td>
+                    <td>958</td>
+                </tr>
+                <tr>
+                    <td><a href="<?=base_url();?>public/admin/#">Britain</a></td>
+                    <td><div id="sparkline-3"></div></td>
+                    <td>19</td>
+                    <td>417</td>
+                </tr>
+                <tr>
+                    <td><a href="<?=base_url();?>public/admin/#">Brazil</a></td>
+                    <td><div id="sparkline-4"></div></td>
+                    <td>109</td>
+                    <td>476</td>
+                </tr>
+                <tr>
+                    <td><a href="<?=base_url();?>public/admin/#">China</a></td>
+                    <td><div id="sparkline-5"></div></td>
+                    <td>192</td>
+                    <td>437</td>
+                </tr>
+                <tr>
+                    <td><a href="<?=base_url();?>public/admin/#">Australia</a></td>
+                    <td><div id="sparkline-6"></div></td>
+                    <td>1709</td>
+                    <td>947</td>
+                </tr>
+            </table><!-- /.table -->
+        </div>
+    </div><!-- /.box-body-->
+    <div class="box-footer">
+        <button class="btn btn-info"><i class="fa fa-download"></i> Generate PDF</button>
+        <button class="btn btn-warning"><i class="fa fa-bug"></i> Report Bug</button>
     </div>
 </div>
-<div class="separator bottom"></div>
+<!-- /.box -->
 
-<!-- Website Traffic Chart -->
-<div class="widget" data-toggle="collapse-widget">
-    <div class="widget-head">
-        <h4 class="heading glyphicons cardio"><i></i>Website Traffic</h4>
-    </div>
-    <div class="widget-body">
-        <div id="chart_ordered_bars" style="height: 250px;"></div>
-    </div>
-</div>
-<!-- // Website Traffic Chart END -->
-
-<!-- Button Widget -->
-<div class="menubar">
-    <ul>
-        <li>Button widget:</li>
-        <li><a href="">Button 1</a></li>
-        <li class="divider"></li>
-        <li><a href="">Button 2</a></li>
-        <li class="divider"></li>
-        <li><a href="">Export</a></li>
-    </ul>
-</div>
-<div class="separator bottom"></div>
-<!-- // Button Widget END -->
-
-<div class="row-fluid">
-    <div class="span6">
-
-        <!-- Stats/List/Sparklines Widget -->
-        <div class="widget" data-toggle="collapse-widget">
-
-            <!-- Widget Heading -->
-            <div class="widget-head">
-                <h4 class="heading glyphicons stats"><i></i>Overview</h4>
-            </div>
-            <!-- // Widget Heading END -->
-
-            <div class="widget-body list">
-                <ul>
-
-                    <!-- List item -->
-                    <li>
-                        <span class="count">350,254 <span class="sparkline"></span></span>
-                        Visits						</li>
-                    <!-- // List item END -->
-
-                    <!-- List item -->
-                    <li>
-                        <span class="count">120,103 <span class="sparkline"></span></span>
-                        Visitors						</li>
-                    <!-- // List item END -->
-
-                    <!-- List item -->
-                    <li>
-                        <span class="count">5,156,392 <span class="sparkline"></span></span>
-                        Pageviews						</li>
-                    <!-- // List item END -->
-
-                </ul>
+<!-- Chat box -->
+<div class="box box-success">
+    <div class="box-header">
+        <h3 class="box-title"><i class="fa fa-comments-o"></i> Chat</h3>
+        <div class="box-tools pull-right" data-toggle="tooltip" title="Status">
+            <div class="btn-group" data-toggle="btn-toggle" >
+                <button type="button" class="btn btn-default btn-sm active"><i class="fa fa-square text-green"></i></button>
+                <button type="button" class="btn btn-default btn-sm"><i class="fa fa-square text-red"></i></button>
             </div>
         </div>
-        <!-- Stats/List/Sparklines Widget END -->
-
-        <!-- Stats/List/Sparklines Widget -->
-        <div class="widget" data-toggle="collapse-widget">
-
-            <!-- Widget Heading -->
-            <div class="widget-head">
-                <h4 class="heading glyphicons heart"><i></i>Interest</h4>
-            </div>
-            <!-- // Widget Heading END -->
-
-            <div class="widget-body list">
-                <ul>
-
-                    <!-- List item -->
-                    <li>
-                        <span class="count">00:01:59 <span class="sparkline"></span></span>
-                        avg.time						</li>
-                    <!-- // List item END -->
-
-                    <!-- List item -->
-                    <li>
-                        <span class="count">48% <span class="sparkline"></span></span>
-                        returning						</li>
-                    <!-- // List item END -->
-
-                </ul>
+    </div>
+    <div class="box-body chat" id="chat-box">
+        <!-- chat item -->
+        <div class="item">
+            <img src="<?=base_url();?>public/admin/img/avatar.png" alt="user image" class="online"/>
+            <p class="message">
+                <a href="<?=base_url();?>public/admin/#" class="name">
+                    <small class="text-muted pull-right"><i class="fa fa-clock-o"></i> 2:15</small>
+                    Mike Doe
+                </a>
+                I would like to meet you to discuss the latest news about
+                the arrival of the new theme. They say it is going to be one the
+                best themes on the market
+            </p>
+            <div class="attachment">
+                <h4>Attachments:</h4>
+                <p class="filename">
+                    Theme-thumbnail-image.jpg
+                </p>
+                <div class="pull-right">
+                    <button class="btn btn-primary btn-sm btn-flat">Open</button>
+                </div>
+            </div><!-- /.attachment -->
+        </div><!-- /.item -->
+        <!-- chat item -->
+        <div class="item">
+            <img src="<?=base_url();?>public/admin/img/avatar2.png" alt="user image" class="offline"/>
+            <p class="message">
+                <a href="<?=base_url();?>public/admin/#" class="name">
+                    <small class="text-muted pull-right"><i class="fa fa-clock-o"></i> 5:15</small>
+                    Jane Doe
+                </a>
+                I would like to meet you to discuss the latest news about
+                the arrival of the new theme. They say it is going to be one the
+                best themes on the market
+            </p>
+        </div><!-- /.item -->
+        <!-- chat item -->
+        <div class="item">
+            <img src="<?=base_url();?>public/admin/img/avatar3.png" alt="user image" class="offline"/>
+            <p class="message">
+                <a href="<?=base_url();?>public/admin/#" class="name">
+                    <small class="text-muted pull-right"><i class="fa fa-clock-o"></i> 5:30</small>
+                    Susan Doe
+                </a>
+                I would like to meet you to discuss the latest news about
+                the arrival of the new theme. They say it is going to be one the
+                best themes on the market
+            </p>
+        </div><!-- /.item -->
+    </div><!-- /.chat -->
+    <div class="box-footer">
+        <div class="input-group">
+            <input class="form-control" placeholder="Type message..."/>
+            <div class="input-group-btn">
+                <button class="btn btn-success"><i class="fa fa-plus"></i></button>
             </div>
         </div>
-        <!-- // Stats/List/Sparklines Widget END -->
-
     </div>
-    <div class="span6">
+</div><!-- /.box (chat box) -->
 
-        <!-- Traffic Sources Pie Chart -->
-        <div class="widget" data-toggle="collapse-widget">
-            <div class="widget-head">
-                <h4 class="heading glyphicons pie_chart"><i></i>Traffic sources</h4>
-            </div>
-            <div class="widget-body">
-                <div id="pie" style="height: 221px;"></div>
-            </div>
+<!-- TO DO List -->
+<div class="box box-primary">
+    <div class="box-header">
+        <i class="ion ion-clipboard"></i>
+        <h3 class="box-title">To Do List</h3>
+        <div class="box-tools pull-right">
+            <ul class="pagination pagination-sm inline">
+                <li><a href="<?=base_url();?>public/admin/#">&laquo;</a></li>
+                <li><a href="<?=base_url();?>public/admin/#">1</a></li>
+                <li><a href="<?=base_url();?>public/admin/#">2</a></li>
+                <li><a href="<?=base_url();?>public/admin/#">3</a></li>
+                <li><a href="<?=base_url();?>public/admin/#">&raquo;</a></li>
+            </ul>
         </div>
-        <!-- // Traffic Sources Pie Chart END -->
-
-    </div>
-</div>
-
-<!-- Google Vizualization DataTable Widget -->
-<div class="widget widget-tabs">
-
-    <!-- Widget Heading -->
-    <div class="widget-head">
-        <ul>
-            <li class="active"><a class="glyphicons coffe_cup" href="#dataTableSourcesTab" data-toggle="tab"><i></i>Traffic sources</a></li>
-            <li><a class="glyphicons share_alt" href="#dataTableRefferingTab" data-toggle="tab"><i></i>Referrals</a></li>
+    </div><!-- /.box-header -->
+    <div class="box-body">
+        <ul class="todo-list">
+            <li>
+                <!-- drag handle -->
+                                            <span class="handle">
+                                                <i class="fa fa-ellipsis-v"></i>
+                                                <i class="fa fa-ellipsis-v"></i>
+                                            </span>
+                <!-- checkbox -->
+                <input type="checkbox" value="" name=""/>
+                <!-- todo text -->
+                <span class="text">Design a nice theme</span>
+                <!-- Emphasis label -->
+                <small class="label label-danger"><i class="fa fa-clock-o"></i> 2 mins</small>
+                <!-- General tools such as edit or delete-->
+                <div class="tools">
+                    <i class="fa fa-edit"></i>
+                    <i class="fa fa-trash-o"></i>
+                </div>
+            </li>
+            <li>
+                                            <span class="handle">
+                                                <i class="fa fa-ellipsis-v"></i>
+                                                <i class="fa fa-ellipsis-v"></i>
+                                            </span>
+                <input type="checkbox" value="" name=""/>
+                <span class="text">Make the theme responsive</span>
+                <small class="label label-info"><i class="fa fa-clock-o"></i> 4 hours</small>
+                <div class="tools">
+                    <i class="fa fa-edit"></i>
+                    <i class="fa fa-trash-o"></i>
+                </div>
+            </li>
+            <li>
+                                            <span class="handle">
+                                                <i class="fa fa-ellipsis-v"></i>
+                                                <i class="fa fa-ellipsis-v"></i>
+                                            </span>
+                <input type="checkbox" value="" name=""/>
+                <span class="text">Let theme shine like a star</span>
+                <small class="label label-warning"><i class="fa fa-clock-o"></i> 1 day</small>
+                <div class="tools">
+                    <i class="fa fa-edit"></i>
+                    <i class="fa fa-trash-o"></i>
+                </div>
+            </li>
+            <li>
+                                            <span class="handle">
+                                                <i class="fa fa-ellipsis-v"></i>
+                                                <i class="fa fa-ellipsis-v"></i>
+                                            </span>
+                <input type="checkbox" value="" name=""/>
+                <span class="text">Let theme shine like a star</span>
+                <small class="label label-success"><i class="fa fa-clock-o"></i> 3 days</small>
+                <div class="tools">
+                    <i class="fa fa-edit"></i>
+                    <i class="fa fa-trash-o"></i>
+                </div>
+            </li>
+            <li>
+                                            <span class="handle">
+                                                <i class="fa fa-ellipsis-v"></i>
+                                                <i class="fa fa-ellipsis-v"></i>
+                                            </span>
+                <input type="checkbox" value="" name=""/>
+                <span class="text">Check your messages and notifications</span>
+                <small class="label label-primary"><i class="fa fa-clock-o"></i> 1 week</small>
+                <div class="tools">
+                    <i class="fa fa-edit"></i>
+                    <i class="fa fa-trash-o"></i>
+                </div>
+            </li>
+            <li>
+                                            <span class="handle">
+                                                <i class="fa fa-ellipsis-v"></i>
+                                                <i class="fa fa-ellipsis-v"></i>
+                                            </span>
+                <input type="checkbox" value="" name=""/>
+                <span class="text">Let theme shine like a star</span>
+                <small class="label label-default"><i class="fa fa-clock-o"></i> 1 month</small>
+                <div class="tools">
+                    <i class="fa fa-edit"></i>
+                    <i class="fa fa-trash-o"></i>
+                </div>
+            </li>
         </ul>
+    </div><!-- /.box-body -->
+    <div class="box-footer clearfix no-border">
+        <button class="btn btn-default pull-right"><i class="fa fa-plus"></i> Add item</button>
     </div>
-    <!-- // Widget Heading END -->
+</div><!-- /.box -->
 
-    <div class="widget-body">
-        <div class="tab-content">
+</section><!-- right col -->
+</div><!-- /.row (main row) -->
 
-            <!-- Sources Tab -->
-            <div class="tab-pane active" id="dataTableSourcesTab">
-                <div id="dataTableSources"></div>
-            </div>
-            <!-- // Sources Tab END -->
+</section><!-- /.content -->
+</aside><!-- /.right-side -->
+</div><!-- ./wrapper -->
 
-            <!-- Reffering Tab -->
-            <div class="tab-pane" id="dataTableRefferingTab">
-                <div id="dataTableReffering"></div>
-            </div>
-            <!-- // Reffering Tab END -->
+<!-- add new calendar event modal -->
 
-        </div>
-    </div>
-</div>
-<!-- // Google Vizualization DataTable Widget END -->
 
-</div>
-
-</div>
-<!-- // Content END -->
-
-</div>
-<div class="clearfix"></div>
-<!-- // Sidebar menu & content wrapper END -->
-
-<div id="footer" class="hidden-print">
-    <!--  Copyright Line -->
-    <div class="copy">&copy; 2012 - 2013 - MosaicPro - All Rights Reserved. <a href="http://themeforest.net/item/adminkit-premium-admin-template/4437902?ref=mosaicpro" target="_blank">Purchase this template on ThemeForest</a> - Current version: v1.3 / <a target="_blank" href="http://mosaicpro.biz/adminkit/CHANGELOG">changelog</a></div>
-    <!--  End Copyright Line -->
-</div>
-<!-- // Footer END -->
-
-</div>
-<!-- // Main Container Fluid END -->
-
-<!-- Modal Gallery -->
-<div id="modal-gallery" class="modal modal-gallery hide fade hidden-print" tabindex="-1">
-    <div class="modal-header">
-        <a class="close" data-dismiss="modal">&times;</a>
-        <h3 class="modal-title"></h3>
-    </div>
-    <div class="modal-body"><div class="modal-image"></div></div>
-    <div class="modal-footer">
-        <a class="btn btn-primary modal-next">Next <i class="icon-arrow-right icon-white"></i></a>
-        <a class="btn btn-info modal-prev"><i class="icon-arrow-left icon-white"></i> Previous</a>
-        <a class="btn btn-success modal-play modal-slideshow" data-slideshow="5000"><i class="icon-play icon-white"></i> Slideshow</a>
-        <a class="btn modal-download" target="_blank"><i class="icon-download"></i> Download</a>
-    </div>
-</div>
-<!-- // Modal Gallery END -->
-
-<!-- Guided Tour Ribbon -->
-<div id="guided-tour" class="hidden-phone hidden-tablet"><span id="open-tour">
-		<span class="hide">Open</span>Tour</span>
-    <span id="close-tour">&times;</span>
-</div>
-
-<!-- Guided Tour -->
-<ul id="tlyPageGuide" data-tourtitle="Guided Tour" class="hidden-print hide">
-
-    <!-- Tour Item -->
-    <li class="tlypageguide_left" data-tourtarget=".navbar.main .btn-navbar">
-        <div>
-            <h4>Toggle menu visibility</h4>
-            <p>Show &amp; hide the sidebar menus on desktop, tablet and mobile with the same toggle button on top.</p>
-        </div>
-    </li>
-    <!-- // Tour Item END -->
-
-    <!-- Tour Item -->
-    <li class="tlypageguide_right" data-tourtarget=".menu-left .ui-resizable-e, .menu-right .ui-resizable-w">
-        <div>
-            <h4>Resizable sidebar menu</h4>
-            <p>Inspired by real world applications, the sidebar is resizable. When you have a left menu, just drag by the Est margin and by West on right menu. It will remember and keep your preferred sidebar size.</p>
-        </div>
-    </li>
-    <!-- // Tour Item END -->
-
-    <!-- Tour Item -->
-    <li class="tlypageguide_top" data-tourtarget="#menu .slim-scroll > ul:first">
-        <div>
-            <h4>3 Level submenus</h4>
-            <p>Supports LOTS of menu items. The sidebar also has a maximum height and becomes scrollable when limits are reached. It's also a nice custom scroll!</p>
-        </div>
-    </li>
-    <!-- // Tour Item END -->
-
-    <!-- Tour Item -->
-    <li class="tlypageguide_right" data-tourtarget=".topnav .eyedropper">
-        <div>
-            <h4>Unlimited Colors</h4>
-            <p>Change the color on-page with unlimited color variations. The sky is the limit!</p>
-        </div>
-    </li>
-    <!-- // Tour Item END -->
-
-    <!-- Tour Item -->
-    <li class="tlypageguide_right" data-tourtarget="#menu .uniformjs.menu_js">
-        <div>
-            <h4>Left &amp; right sidebar menus</h4>
-            <p>Whether you need a left or right sidebar for your next cool web app, we've got you covered!</p>
-        </div>
-    </li>
-    <!-- // Tour Item END -->
-
-    <!-- Tour Item -->
-    <li class="tlypageguide_bottom" data-tourtarget="#menu .uniformjs.layout_js">
-        <div>
-            <h4>Fixed &amp; Fluid layouts</h4>
-            <p>Choose from a 1024px fixed layout to a fully fluid wide screen experience!</p>
-        </div>
-    </li>
-    <!-- // Tour Item END -->
-
-    <!-- Tour Item -->
-    <li class="tlypageguide_left" data-tourtarget="#lang_nav">
-        <div>
-            <h4>Translate System</h4>
-            <p>Support for internationalization with easy translation tools.</p>
-        </div>
-    </li>
-    <!-- // Tour Item END -->
-
-    <!-- Tour Item -->
-    <li class="tlypageguide_top" data-tourtarget="#content .gallery:first">
-        <div>
-            <h4>Photo Gallery</h4>
-            <p>With three photo gallery layouts and fluid grid compatible, you can make just about anything, from a single product edit page to a fully featured photo album.</p>
-        </div>
-    </li>
-    <!-- // Tour Item END -->
-
-    <!-- Tour Item -->
-    <li class="tlypageguide_top" data-tourtarget="#content .widget-activity .filters">
-        <div>
-            <h4>Turn anything into Tabs</h4>
-            <p>Tabs anything! Just add a HTML5 data attribute to any list and voila!</p>
-        </div>
-    </li>
-    <!-- // Tour Item END -->
-
-    <!-- Tour Item -->
-    <li class="tlypageguide_left" data-tourtarget="#content .widget-stats:eq(5)">
-        <div>
-            <h4>Over 400 Stats widgets</h4>
-            <p>White widgets, gray widgets, dark widgets, colored widgets, chart widgets, sidebar widgets - we have it all!</p>
-        </div>
-    </li>
-    <!-- // Tour Item END -->
-
-    <!-- Tour Item -->
-    <li class="tlypageguide_top" data-tourtarget="#content .widget-scroll:first">
-        <div>
-            <h4>Turn anything into Nice Scrollable Areas</h4>
-            <p>Who likes a standard scroll these days? Wait .. don't answer! We do love nice &amp; custom scollable content.</p>
-        </div>
-    </li>
-    <!-- // Tour Item END -->
-
-    <!-- Tour Item -->
-    <li class="tlypageguide_top" data-tourtarget="#content #pie">
-        <div>
-            <h4>Awesome charts</h4>
-            <p>Lots of charts for your custom analytics pages, from pie charts, bar charts, line charts, stacked charts to even more advanced charts.</p>
-        </div>
-    </li>
-    <!-- // Tour Item END -->
-
-</ul>
-<!-- // Guided Tour END -->
-
-<!-- JQuery -->
-<script src="<?=base_url();?>publics/admin/theme/scripts/plugins/system/jquery.min.js"></script>
-
-<!-- Modernizr -->
-<script src="<?=base_url();?>publics/admin/theme/scripts/plugins/system/modernizr.js"></script>
-
+<!-- jQuery 2.0.2 -->
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.2/jquery.min.js"></script>
+<!-- jQuery UI 1.10.3 -->
+<script src="<?=base_url();?>public/admin/js/jquery-ui-1.10.3.min.js" type="text/javascript"></script>
 <!-- Bootstrap -->
-<script src="<?=base_url();?>publics/admin/bootstrap/js/bootstrap.min.js"></script>
+<script src="<?=base_url();?>public/admin/js/bootstrap.min.js" type="text/javascript"></script>
+<!-- Morris.js charts -->
+<script src="//cdnjs.cloudflare.com/ajax/libs/raphael/2.1.0/raphael-min.js"></script>
+<script src="<?=base_url();?>public/admin/js/plugins/morris/morris.min.js" type="text/javascript"></script>
+<!-- Sparkline -->
+<script src="<?=base_url();?>public/admin/js/plugins/sparkline/jquery.sparkline.min.js" type="text/javascript"></script>
+<!-- jvectormap -->
+<script src="<?=base_url();?>public/admin/js/plugins/jvectormap/jquery-jvectormap-1.2.2.min.js" type="text/javascript"></script>
+<script src="<?=base_url();?>public/admin/js/plugins/jvectormap/jquery-jvectormap-world-mill-en.js" type="text/javascript"></script>
+<!-- fullCalendar -->
+<script src="<?=base_url();?>public/admin/js/plugins/fullcalendar/fullcalendar.min.js" type="text/javascript"></script>
+<!-- jQuery Knob Chart -->
+<script src="<?=base_url();?>public/admin/js/plugins/jqueryKnob/jquery.knob.js" type="text/javascript"></script>
+<!-- daterangepicker -->
+<script src="<?=base_url();?>public/admin/js/plugins/daterangepicker/daterangepicker.js" type="text/javascript"></script>
+<!-- Bootstrap WYSIHTML5 -->
+<script src="<?=base_url();?>public/admin/js/plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.all.min.js" type="text/javascript"></script>
+<!-- iCheck -->
+<script src="<?=base_url();?>public/admin/js/plugins/iCheck/icheck.min.js" type="text/javascript"></script>
 
-<!-- SlimScroll Plugin -->
-<script src="<?=base_url();?>publics/admin/theme/scripts/plugins/other/jquery-slimScroll/jquery.slimscroll.min.js"></script>
+<!-- AdminLTE App -->
+<script src="<?=base_url();?>public/admin/js/AdminLTE/app.js" type="text/javascript"></script>
 
-<!-- Common Demo Script -->
-<script src="<?=base_url();?>publics/admin/theme/scripts/demo/common.js?1365754760"></script>
+<!-- AdminLTE dashboard demo (This is only for demo purposes) -->
+<script src="<?=base_url();?>public/admin/js/AdminLTE/dashboard.js" type="text/javascript"></script>
 
-<!-- Holder Plugin -->
-<script src="<?=base_url();?>publics/admin/theme/scripts/plugins/other/holder/holder.js"></script>
-
-<!-- Uniform Forms Plugin -->
-<script src="<?=base_url();?>publics/admin/theme/scripts/plugins/forms/pixelmatrix-uniform/jquery.uniform.min.js"></script>
-
-<!-- Global -->
-<script>
-	var basePath = '';
-	</script>
-
-<!-- Bootstrap Extended -->
-<script src="<?=base_url();?>publics/admin/bootstrap/extend/bootstrap-select/bootstrap-select.js"></script>
-<script src="<?=base_url();?>publics/admin/bootstrap/extend/bootstrap-toggle-buttons/static/js/jquery.toggle.buttons.js"></script>
-<script src="<?=base_url();?>publics/admin/bootstrap/extend/bootstrap-hover-dropdown/twitter-bootstrap-hover-dropdown.min.js"></script>
-<script src="<?=base_url();?>publics/admin/bootstrap/extend/jasny-bootstrap/js/jasny-bootstrap.min.js"></script>
-<script src="<?=base_url();?>publics/admin/bootstrap/extend/jasny-bootstrap/js/bootstrap-fileupload.js"></script>
-<script src="<?=base_url();?>publics/admin/bootstrap/extend/bootbox.js"></script>
-<script src="<?=base_url();?>publics/admin/bootstrap/extend/bootstrap-wysihtml5/js/wysihtml5-0.3.0_rc2.min.js"></script>
-<script src="<?=base_url();?>publics/admin/bootstrap/extend/bootstrap-wysihtml5/js/bootstrap-wysihtml5-0.0.2.js"></script>
-
-<!-- Google Code Prettify -->
-<script src="<?=base_url();?>publics/admin/theme/scripts/plugins/other/google-code-prettify/prettify.js"></script>
-
-<!-- JQueryUI -->
-<script src="<?=base_url();?>publics/admin/theme/scripts/plugins/system/jquery-ui/js/jquery-ui-1.9.2.custom.min.js"></script>
-
-<!-- JQueryUI Touch Punch -->
-<!-- small hack that enables the use of touch events on sites using the jQuery UI user interface library -->
-<script src="<?=base_url();?>publics/admin/theme/scripts/plugins/system/jquery-ui-touch-punch/jquery.ui.touch-punch.min.js"></script>
-
-<!-- Gritter Notifications Plugin -->
-<script src="<?=base_url();?>publics/admin/theme/scripts/plugins/notifications/Gritter/js/jquery.gritter.min.js"></script>
-
-<!-- Notyfy Notifications Plugin -->
-<script src="<?=base_url();?>publics/admin/theme/scripts/plugins/notifications/notyfy/jquery.notyfy.js"></script>
-
-<!-- MiniColors Plugin -->
-<script src="<?=base_url();?>publics/admin/theme/scripts/plugins/color/jquery-miniColors/jquery.miniColors.js"></script>
-
-<!-- DateTimePicker Plugin -->
-<script src="<?=base_url();?>publics/admin/theme/scripts/plugins/forms/bootstrap-datetimepicker/js/bootstrap-datetimepicker.min.js"></script>
-
-<!-- Cookie Plugin -->
-<script src="<?=base_url();?>publics/admin/theme/scripts/plugins/system/jquery.cookie.js"></script>
-
-<!-- Colors -->
-<script>
-	var primaryColor = '#e25f39',
-		dangerColor = '#bd362f',
-		successColor = '#609450',
-		warningColor = '#ab7a4b',
-		inverseColor = '#45484d';
-	</script>
-
-<!-- Themer -->
-<script>
-	var themerPrimaryColor = primaryColor;
-	</script>
-<script src="<?=base_url();?>publics/admin/theme/scripts/demo/themer.js"></script>
-
-<!-- Twitter Feed -->
-<script src="<?=base_url();?>publics/admin/theme/scripts/demo/twitter.js"></script>
-
-<!-- Easy-pie Plugin -->
-<script src="<?=base_url();?>publics/admin/theme/scripts/plugins/charts/easy-pie/jquery.easy-pie-chart.js"></script>
-
-<!-- Sparkline Charts Plugin -->
-<script src="<?=base_url();?>publics/admin/theme/scripts/plugins/charts/sparkline/jquery.sparkline.min.js"></script>
-
-<!-- Ba-Resize Plugin -->
-<script src="<?=base_url();?>publics/admin/theme/scripts/plugins/other/jquery.ba-resize.js"></script>
-
-<!-- Dashboard Demo Script -->
-<script src="<?=base_url();?>publics/admin/theme/scripts/demo/index.js?1365754760"></script>
-
-
-<!-- Pageguide Plugin -->
-<!--[if gt IE 8]><!--><script src="<?=base_url();?>publics/admin/theme/scripts/plugins/other/pageguide/js/pageguide.js"></script><!--<![endif]-->
-
-<!-- Guided Tour Demo Script -->
-<!--[if gt IE 8]><!--><script src="<?=base_url();?>publics/admin/theme/scripts/demo/guidedtour.js"></script><!--<![endif]-->
-
-
-<!-- Google JSAPI -->
-<script type="text/javascript" src="https://www.google.com/jsapi"></script>
-
-<!--  Flot Charts Plugin -->
-<script src="<?=base_url();?>publics/admin/theme/scripts/plugins/charts/flot/jquery.flot.js"></script>
-<script src="<?=base_url();?>publics/admin/theme/scripts/plugins/charts/flot/jquery.flot.pie.js"></script>
-<script src="<?=base_url();?>publics/admin/theme/scripts/plugins/charts/flot/jquery.flot.tooltip.js"></script>
-<script src="<?=base_url();?>publics/admin/theme/scripts/plugins/charts/flot/jquery.flot.selection.js"></script>
-<script src="<?=base_url();?>publics/admin/theme/scripts/plugins/charts/flot/jquery.flot.resize.js"></script>
-<script src="<?=base_url();?>publics/admin/theme/scripts/plugins/charts/flot/jquery.flot.orderBars.js"></script>
-
-<!-- Charts Helper Demo Script -->
-<script src="<?=base_url();?>publics/admin/theme/scripts/demo/charts.helper.js?1365754760"></script>
-
-
-<!-- Optional Resizable Sidebars -->
-<!--[if gt IE 8]><!--><script src="<?=base_url();?>publics/admin/theme/scripts/demo/resizable.js?1365754760"></script><!--<![endif]-->
-
-<!-- Bootstrap Image Gallery -->
-<script src="<?=base_url();?>publics/admin/bootstrap/extend/bootstrap-image-gallery/js/bootstrap-image-gallery.min.js" type="text/javascript"></script>
-
-<script>
-	//Load the Visualization API and the table/core chart package.
-	google.load('visualization', '1.0', {'packages':['table', 'corechart']});
-	
-	// Set a callback to run when the Google Visualization API is loaded.
-	google.setOnLoadCallback(charts.traffic_sources_dataTables.init);
-	</script>
+<!-- AdminLTE for demo purposes -->
+<script src="<?=base_url();?>public/admin/js/AdminLTE/demo.js" type="text/javascript"></script>
 
 </body>
 </html>
